@@ -15,12 +15,79 @@ function App() {
     accidentDate: false
   })
   const [showSuccessPopup, setShowSuccessPopup] = useState(false)
+  const [validationErrors, setValidationErrors] = useState({
+    name: '',
+    email: '',
+    phone: ''
+  })
+
+  // Validation functions
+  const validateName = (name) => {
+    const trimmedName = name.trim()
+    if (!trimmedName) {
+      return 'Name is required'
+    }
+    if (trimmedName.length < 2) {
+      return 'Name must be at least 2 characters'
+    }
+    if (!/^[a-zA-Z\s'-]+$/.test(trimmedName)) {
+      return 'Name can only contain letters, spaces, hyphens, and apostrophes'
+    }
+    if (trimmedName.length > 50) {
+      return 'Name must be less than 50 characters'
+    }
+    return ''
+  }
+
+  const validateEmail = (email) => {
+    const trimmedEmail = email.trim()
+    if (!trimmedEmail) {
+      return 'Email is required'
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(trimmedEmail)) {
+      return 'Please enter a valid email address'
+    }
+    return ''
+  }
+
+  const validatePhone = (phone) => {
+    const trimmedPhone = phone.trim()
+    if (!trimmedPhone) {
+      return 'Phone number is required'
+    }
+    // Remove all non-digit characters for validation
+    const digitsOnly = trimmedPhone.replace(/\D/g, '')
+    // US phone numbers are 10 digits (without country code) or 11 digits (with +1)
+    if (digitsOnly.length !== 10 && digitsOnly.length !== 11) {
+      return 'US phone number must be 10 or 11 digits'
+    }
+    // If 11 digits, first digit must be 1 (country code)
+    if (digitsOnly.length === 11 && digitsOnly[0] !== '1') {
+      return 'Invalid country code for US number'
+    }
+    // Check if it's a valid phone format (allows various formats)
+    const phoneRegex = /^[\d\s\-\(\)\+]+$/
+    if (!phoneRegex.test(trimmedPhone)) {
+      return 'Please enter a valid phone number'
+    }
+    return ''
+  }
 
   const handleInputChange = (e) => {
+    const { name, value } = e.target
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     })
+
+    // Clear validation error when user starts typing
+    if (validationErrors[name]) {
+      setValidationErrors({
+        ...validationErrors,
+        [name]: ''
+      })
+    }
   }
 
   const toggleDropdown = (name) => {
@@ -49,11 +116,19 @@ function App() {
     if (formStep === 2 && !formData.accidentDate) {
       return // Don't proceed if accident date not selected
     }
-    if (formStep === 3 && !formData.name.trim()) {
-      return // Don't proceed if name is empty
+    if (formStep === 3) {
+      const nameError = validateName(formData.name)
+      if (nameError) {
+        setValidationErrors({ ...validationErrors, name: nameError })
+        return
+      }
     }
-    if (formStep === 4 && !formData.email.trim()) {
-      return // Don't proceed if email is empty
+    if (formStep === 4) {
+      const emailError = validateEmail(formData.email)
+      if (emailError) {
+        setValidationErrors({ ...validationErrors, email: emailError })
+        return
+      }
     }
 
     if (formStep < 5) {
@@ -64,15 +139,28 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    // Validate all fields are filled
-    if (!formData.injuryType || !formData.accidentDate || !formData.name.trim() ||
-        !formData.email.trim() || !formData.phone.trim()) {
-      return // Don't submit if any field is empty
+    // Validate all fields
+    const nameError = validateName(formData.name)
+    const emailError = validateEmail(formData.email)
+    const phoneError = validatePhone(formData.phone)
+
+    if (nameError || emailError || phoneError) {
+      setValidationErrors({
+        name: nameError,
+        email: emailError,
+        phone: phoneError
+      })
+      return
+    }
+
+    // Validate dropdown selections
+    if (!formData.injuryType || !formData.accidentDate) {
+      return
     }
 
     // Ensure we're on step 5
     if (formStep !== 5) {
-      return // Don't submit if not on final step
+      return
     }
 
     console.log('Form submitted:', formData)
@@ -362,7 +450,11 @@ function App() {
                       onChange={handleInputChange}
                       placeholder="Full Name"
                       required
+                      className={validationErrors.name ? 'input-error' : ''}
                     />
+                    {validationErrors.name && (
+                      <div className="error-message">{validationErrors.name}</div>
+                    )}
                     <button type="button" onClick={handleNext} className="btn-next">
                       Next
                     </button>
@@ -380,7 +472,11 @@ function App() {
                       onChange={handleInputChange}
                       placeholder="your@email.com"
                       required
+                      className={validationErrors.email ? 'input-error' : ''}
                     />
+                    {validationErrors.email && (
+                      <div className="error-message">{validationErrors.email}</div>
+                    )}
                     <button type="button" onClick={handleNext} className="btn-next">
                       Next
                     </button>
@@ -398,7 +494,11 @@ function App() {
                       onChange={handleInputChange}
                       placeholder="(555) 123-4567"
                       required
+                      className={validationErrors.phone ? 'input-error' : ''}
                     />
+                    {validationErrors.phone && (
+                      <div className="error-message">{validationErrors.phone}</div>
+                    )}
                     <button type="submit" className="btn-submit">
                       Get My Free Consultation
                     </button>
@@ -478,53 +578,77 @@ function App() {
         </div>
       </section>
 
-      {/* Process Steps - Modern Timeline */}
+      {/* Process Steps - Vertical Interactive Timeline */}
       <section className="process-section">
         <div className="container">
           <h2 className="section-title">Our Simple 3-Step Process</h2>
           <div className="timeline-container">
             <div className="timeline-line"></div>
-            <div className="process-steps">
-              <div className="process-step">
-                <div className="step-icon-wrapper">
-                  <div className="step-number">1</div>
-                  <div className="step-connector"></div>
-                </div>
-                <div className="step-content">
-                  <h3>Free Consultation</h3>
-                  <p>
-                    Contact us for a free, no-obligation consultation. We'll review your case
-                    and explain your legal options in plain language.
-                  </p>
-                  <button className="btn-cta">Get Started</button>
-                </div>
+
+            {/* Step 1 - Left Side */}
+            <div className="timeline-item timeline-left timeline-first">
+              <div className="timeline-content">
+                <h3>Free Consultation</h3>
+                <p>
+                  Contact us for a free, no-obligation consultation. We'll review your case
+                  and explain your legal options in plain language.
+                </p>
+                <button className="btn-cta">Get Started</button>
               </div>
-              <div className="process-step">
-                <div className="step-icon-wrapper">
-                  <div className="step-number">2</div>
-                  <div className="step-connector"></div>
-                </div>
-                <div className="step-content">
-                  <h3>Case Evaluation</h3>
-                  <p>
-                    Our legal team will thoroughly investigate your accident, gather evidence,
-                    and build a strong case on your behalf.
-                  </p>
-                  <button className="btn-cta">Get Started</button>
-                </div>
+              <div className="timeline-marker">
+                <div className="marker-dot">1</div>
               </div>
-              <div className="process-step">
-                <div className="step-icon-wrapper">
-                  <div className="step-number">3</div>
-                </div>
-                <div className="step-content">
-                  <h3>Get Compensated</h3>
-                  <p>
-                    We negotiate aggressively with insurance companies or take your case to court
-                    to secure the maximum compensation you deserve.
-                  </p>
-                  <button className="btn-cta">Get Started</button>
-                </div>
+              <div className="timeline-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <line x1="9" y1="10" x2="15" y2="10"></line>
+                  <line x1="9" y1="14" x2="15" y2="14"></line>
+                </svg>
+              </div>
+            </div>
+
+            {/* Step 2 - Right Side */}
+            <div className="timeline-item timeline-right">
+              <div className="timeline-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div className="timeline-marker">
+                <div className="marker-dot">2</div>
+              </div>
+              <div className="timeline-content">
+                <h3>Case Evaluation</h3>
+                <p>
+                  Our legal team will thoroughly investigate your accident, gather evidence,
+                  and build a strong case on your behalf.
+                </p>
+                <button className="btn-cta">Get Started</button>
+              </div>
+            </div>
+
+            {/* Step 3 - Left Side */}
+            <div className="timeline-item timeline-left timeline-last">
+              <div className="timeline-content">
+                <h3>Get Compensated</h3>
+                <p>
+                  We negotiate aggressively with insurance companies or take your case to court
+                  to secure the maximum compensation you deserve.
+                </p>
+                <button className="btn-cta">Get Started</button>
+              </div>
+              <div className="timeline-marker">
+                <div className="marker-dot">3</div>
+              </div>
+              <div className="timeline-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
               </div>
             </div>
           </div>
