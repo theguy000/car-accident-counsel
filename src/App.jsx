@@ -553,6 +553,8 @@ function App() {
           <h2 className="section-title">Why Choose AccidentCounsel Pro?</h2>
           <div className="benefits-grid">
             <div className="benefit-card">
+              <div className="benefit-number">01</div>
+              <div className="benefit-corner-accent"></div>
               <h3>No Upfront Costs</h3>
               <p>
                 We work on a contingency basis - you don't pay unless we win your case.
@@ -560,6 +562,8 @@ function App() {
               </p>
             </div>
             <div className="benefit-card">
+              <div className="benefit-number">02</div>
+              <div className="benefit-corner-accent"></div>
               <h3>Maximum Compensation</h3>
               <p>
                 Our experienced attorneys know how to negotiate with insurance companies
@@ -568,6 +572,8 @@ function App() {
               </p>
             </div>
             <div className="benefit-card">
+              <div className="benefit-number">03</div>
+              <div className="benefit-corner-accent"></div>
               <h3>Hassle-Free Process</h3>
               <p>
                 We handle all the paperwork, negotiations, and legal complexities.
@@ -575,6 +581,11 @@ function App() {
               </p>
             </div>
           </div>
+
+          {/* Floating decorative elements */}
+          <div className="floating-shape shape-1"></div>
+          <div className="floating-shape shape-2"></div>
+          <div className="floating-shape shape-3"></div>
         </div>
       </section>
 
