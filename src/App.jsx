@@ -203,13 +203,117 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero">
+        {/* Animated Background Particles */}
+        <div className="hero-particles">
+          <div className="particle particle-1"></div>
+          <div className="particle particle-2"></div>
+          <div className="particle particle-3"></div>
+          <div className="particle particle-4"></div>
+          <div className="particle particle-5"></div>
+        </div>
+
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
               <h2 className="hero-title">Expert Legal Counsel for Car Accident Victims</h2>
+
+              {/* Statistics Subheading */}
+              <div className="hero-stats">
+                <div className="stat-item">
+                  <span className="stat-number">$2M+</span>
+                  <span className="stat-label">Recovered for Clients</span>
+                </div>
+                <div className="stat-divider"></div>
+                <div className="stat-item">
+                  <span className="stat-number">15+</span>
+                  <span className="stat-label">Years Experience</span>
+                </div>
+                <div className="stat-divider"></div>
+                <div className="stat-item">
+                  <span className="stat-number">98%</span>
+                  <span className="stat-label">Success Rate</span>
+                </div>
+              </div>
+
               <p className="hero-subtitle">
                 Get the compensation you deserve. Our experienced attorneys fight for your rights.
               </p>
+
+              {/* Star Rating & Reviews */}
+              <div className="hero-rating">
+                <div className="stars">
+                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                </div>
+                <span className="rating-text">5.0 Stars • 500+ Reviews</span>
+              </div>
+
+              {/* Trust Badges */}
+              <div className="hero-trust-badges">
+                <div className="trust-badge">
+                  <div className="badge-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  </div>
+                  <div className="badge-text">
+                    <div className="badge-title">BBB A+</div>
+                    <div className="badge-subtitle">Accredited</div>
+                  </div>
+                </div>
+                <div className="trust-badge">
+                  <div className="badge-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                    </svg>
+                  </div>
+                  <div className="badge-text">
+                    <div className="badge-title">Avvo 10.0</div>
+                    <div className="badge-subtitle">Superb Rating</div>
+                  </div>
+                </div>
+                <div className="trust-badge">
+                  <div className="badge-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                  </div>
+                  <div className="badge-text">
+                    <div className="badge-title">1,200+</div>
+                    <div className="badge-subtitle">Cases Won</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Phone Button */}
+              <div className="hero-cta">
+                <a href="tel:1-866-555-0123" className="btn-hero-phone">
+                  <svg className="phone-icon-large" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <div className="phone-cta-content">
+                    <span className="phone-cta-label">Call Now for Free Consultation</span>
+                    <span className="phone-cta-number">(866) 555-0123</span>
+                  </div>
+                </a>
+              </div>
+
               <div className="hero-features">
                 <div className="feature-badge">
                   <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
@@ -260,10 +364,15 @@ function App() {
                 <h3>See If You Qualify for Compensation!</h3>
                 <p className="form-subtitle">Follow the steps below to get started</p>
 
-                <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
-                <div className="form-step-indicator">
-                  Step: {formStep} of 5
+                {/* Progress Bar */}
+                <div className="form-progress-container">
+                  <div className="form-progress-bar">
+                    <div className="form-progress-fill" style={{width: `${(formStep / 5) * 100}%`}}></div>
+                  </div>
+                  <div className="form-step-indicator">Step {formStep} of 5</div>
                 </div>
+
+                <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
 
                 {formStep === 1 && (
                   <div className="form-step">
