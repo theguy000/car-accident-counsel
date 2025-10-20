@@ -114,11 +114,21 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+  background: url('/hero-bg.webp');
+  background-size: cover;
+  background-position: center;
   padding: 30px 0 100px 0;
   color: var(--white);
   position: relative;
   overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.65) 0%, rgba(255, 140, 0, 0.65) 100%);
+  z-index: 0;
 }
 
 /* Animated Background Particles */
@@ -129,7 +139,8 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 0;
+  z-index: 1;
+  opacity: 0.3;
   animation: fadeIn 0.5s ease-in;
 }
 
@@ -256,7 +267,7 @@ body {
   gap: 80px;
   align-items: start;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-text {
@@ -702,6 +713,7 @@ body {
   color: var(--text-dark);
   flex: 1;
   max-width: 700px;
+  margin: 0 auto;
   animation: slideInRight 0.8s ease-out;
 }
 
@@ -718,6 +730,18 @@ body {
 
 /* As Seen On Section */
 
+/* Form Header with Step Counter on Right */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.form-header-left {
+  flex: 1;
+}
 
 .qualification-form h3 {
   font-size: 26px;
@@ -728,16 +752,21 @@ body {
 
 .form-subtitle {
   color: var(--text-light);
-  margin-bottom: 20px;
+  margin-bottom: 0;
   font-size: 15px;
   line-height: 1.5;
 }
 
-.form-step-indicator-inline {
-  font-weight: 600;
+.form-step-indicator-right {
+  font-weight: 700;
   color: var(--primary-orange);
-  font-size: 14px;
-  margin-left: 8px;
+  font-size: 16px;
+  background: linear-gradient(135deg, rgba(255, 102, 0, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%);
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 102, 0, 0.2);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.1);
 }
 
 /* Form Progress Container */
@@ -1171,7 +1200,7 @@ body {
 .form-badge-img {
   max-width: 100%;
   height: auto;
-  max-height: 35px;
+  max-height: 45px;
   object-fit: contain;
   filter: grayscale(0%);
   opacity: 0.9;
@@ -1818,6 +1847,11 @@ body {
     display: none;
   }
 
+  .qualification-form {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
   .benefits-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1887,6 +1921,23 @@ body {
 
   .form-arrow-pointer {
     display: none;
+  }
+
+  .qualification-form {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .form-step-indicator-right {
+    align-self: flex-end;
+    font-size: 14px;
+    padding: 10px 16px;
   }
 
   .header-content {
@@ -2005,6 +2056,20 @@ body {
     padding: 0 15px;
   }
 
+  .qualification-form {
+    padding: 25px 20px;
+    margin: 0 auto;
+  }
+
+  .form-header {
+    gap: 12px;
+  }
+
+  .form-step-indicator-right {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
   .hero-title {
     font-size: 28px;
   }
@@ -2052,7 +2117,7 @@ body {
   }
 
   .form-badge-img {
-    max-height: 30px;
+    max-height: 38px;
   }
 
   .hero-features {

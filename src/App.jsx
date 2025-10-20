@@ -281,8 +281,15 @@ function App() {
                 </svg>
               </div>
               <div className="qualification-form">
-                <h3>See If You Qualify for Compensation!</h3>
-                <p className="form-subtitle">Follow the steps below to get started <span className="form-step-indicator-inline">• Step {formStep} of 5</span></p>
+                <div className="form-header">
+                  <div className="form-header-left">
+                    <h3>See If You Qualify for Compensation!</h3>
+                    <p className="form-subtitle">Follow the steps below to get started</p>
+                  </div>
+                  <div className="form-step-indicator-right">
+                    Step {formStep} of 5
+                  </div>
+                </div>
 
                 {/* Progress Bar */}
                 <div className="form-progress-container">
