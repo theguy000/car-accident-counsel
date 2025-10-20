@@ -1,8 +1,18 @@
 {
-  "name": "car",
+  "name": "car-accident-counsel",
   "compatibility_date": "2025-10-20",
   "assets": {
     "directory": "./dist"
+  },
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    }
   }
 }
 
