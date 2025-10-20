@@ -217,24 +217,6 @@ function App() {
             <div className="hero-text">
               <h2 className="hero-title">Expert Legal Counsel for Car Accident Victims</h2>
 
-              {/* Statistics Subheading */}
-              <div className="hero-stats">
-                <div className="stat-item">
-                  <span className="stat-number">$2M+</span>
-                  <span className="stat-label">Recovered for Clients</span>
-                </div>
-                <div className="stat-divider"></div>
-                <div className="stat-item">
-                  <span className="stat-number">15+</span>
-                  <span className="stat-label">Years Experience</span>
-                </div>
-                <div className="stat-divider"></div>
-                <div className="stat-item">
-                  <span className="stat-number">98%</span>
-                  <span className="stat-label">Success Rate</span>
-                </div>
-              </div>
-
               <p className="hero-subtitle">
                 Get the compensation you deserve. Our experienced attorneys fight for your rights.
               </p>
@@ -300,14 +282,13 @@ function App() {
               </div>
               <div className="qualification-form">
                 <h3>See If You Qualify for Compensation!</h3>
-                <p className="form-subtitle">Follow the steps below to get started</p>
+                <p className="form-subtitle">Follow the steps below to get started <span className="form-step-indicator-inline">• Step {formStep} of 5</span></p>
 
                 {/* Progress Bar */}
                 <div className="form-progress-container">
                   <div className="form-progress-bar">
                     <div className="form-progress-fill" style={{width: `${(formStep / 5) * 100}%`}}></div>
                   </div>
-                  <div className="form-step-indicator">Step {formStep} of 5</div>
                 </div>
 
                 <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
@@ -578,6 +559,39 @@ function App() {
                 </div>
               </div>
             </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="results-section">
+        <div className="container">
+          <div className="results-grid">
+            <div className="result-card">
+              <h3 className="result-amount">$30 Million</h3>
+              <div className="result-divider"></div>
+              <h4 className="result-case">Premise Liability Claim</h4>
+            </div>
+            <div className="result-card">
+              <h3 className="result-amount">$20 Million</h3>
+              <div className="result-divider"></div>
+              <h4 className="result-case">Premise Liability Claim / Slip & Fall</h4>
+            </div>
+            <div className="result-card">
+              <h3 className="result-amount">$14.1 Million</h3>
+              <div className="result-divider"></div>
+              <h4 className="result-case">Bicycle Crash vs Commercial Vehicle</h4>
+            </div>
+            <div className="result-card">
+              <h3 className="result-amount">$4.25 Million</h3>
+              <div className="result-divider"></div>
+              <h4 className="result-case">Motorcycle Wreck</h4>
+            </div>
+            <div className="result-card">
+              <h3 className="result-amount">$3 Million</h3>
+              <div className="result-divider"></div>
+              <h4 className="result-case">Rear-End Collision/MVA</h4>
             </div>
           </div>
         </div>

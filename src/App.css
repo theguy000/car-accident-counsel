@@ -449,6 +449,62 @@ body {
   stroke-width: 3;
 }
 
+/* Results Section */
+.results-section {
+  background: linear-gradient(135deg, rgba(26, 35, 126, 0.95) 0%, rgba(13, 27, 62, 0.95) 100%);
+  padding: 30px 0;
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.result-card {
+  text-align: center;
+  padding: 20px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 102, 0, 0.3);
+}
+
+.result-amount {
+  font-size: 36px;
+  font-weight: 800;
+  color: #FF6600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.result-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #FF6600, transparent);
+  margin: 15px auto;
+}
+
+.result-case {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.4;
+}
+
 /* Arrow Animation */
 .arrow-container {
   position: absolute;
@@ -621,7 +677,7 @@ body {
 /* Qualification Form */
 .qualification-form {
   background: var(--white);
-  padding: 50px;
+  padding: 35px;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   color: var(--text-dark);
@@ -646,21 +702,28 @@ body {
 
 .qualification-form h3 {
   font-size: 26px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: var(--primary-orange);
   font-weight: 800;
 }
 
 .form-subtitle {
   color: var(--text-light);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 15px;
   line-height: 1.5;
 }
 
+.form-step-indicator-inline {
+  font-weight: 600;
+  color: var(--primary-orange);
+  font-size: 14px;
+  margin-left: 8px;
+}
+
 /* Form Progress Container */
 .form-progress-container {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .form-progress-bar {
@@ -1064,17 +1127,17 @@ body {
 
 /* Form Professional Badges */
 .form-badges {
-  margin-top: 40px;
-  padding-top: 30px;
+  margin-top: 25px;
+  padding-top: 20px;
   border-top: 2px solid rgba(255, 102, 0, 0.1);
 }
 
 .form-badges-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--text-dark);
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   opacity: 0.9;
 }
 
@@ -1089,7 +1152,7 @@ body {
 .form-badge-img {
   max-width: 100%;
   height: auto;
-  max-height: 70px;
+  max-height: 35px;
   object-fit: contain;
   filter: grayscale(0%);
   opacity: 0.9;
@@ -1871,7 +1934,7 @@ body {
   }
 
   .qualification-form {
-    padding: 40px 30px;
+    padding: 30px 25px;
   }
 
   .section-title {
@@ -1970,7 +2033,7 @@ body {
   }
 
   .form-badge-img {
-    max-height: 55px;
+    max-height: 30px;
   }
 
   .hero-features {
@@ -1979,6 +2042,28 @@ body {
 
   .feature-badge {
     text-align: center;
+  }
+
+  .results-section {
+    padding: 25px 0;
+    margin-top: -30px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .result-card {
+    padding: 20px 15px;
+  }
+
+  .result-amount {
+    font-size: 28px;
+  }
+
+  .result-case {
+    font-size: 13px;
   }
 
   .as-seen-label {
