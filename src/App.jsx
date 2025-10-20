@@ -239,28 +239,6 @@ function App() {
                 Get the compensation you deserve. Our experienced attorneys fight for your rights.
               </p>
 
-              {/* Star Rating & Reviews */}
-              <div className="hero-rating">
-                <div className="stars">
-                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
-                  </svg>
-                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
-                  </svg>
-                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
-                  </svg>
-                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
-                  </svg>
-                  <svg className="star-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
-                  </svg>
-                </div>
-                <span className="rating-text">5.0 Stars • 500+ Reviews</span>
-              </div>
-
               {/* CTA Phone Button */}
               <div className="hero-cta">
                 <a href="tel:1-866-555-0123" className="btn-hero-phone">
@@ -575,22 +553,28 @@ function App() {
                 )}
               </form>
 
-              {/* Professional Badges */}
+              {/* Review Platform Badges */}
               <div className="form-badges">
-                <h4 className="form-badges-title">Awards That Highlight Our Commitment to Excellence</h4>
+                <h4 className="form-badges-title">Trusted By Clients Across All Platforms</h4>
                 <div className="form-badges-grid">
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/Best-Of-Sierra-Nevada-2024-white.png" alt="Best of Sierra Nevada 2024 Gold Winner" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/top-rated-national.png" alt="Top Rated Local Business" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/nv_las-vegas_car-accident-lawyers_2024_inverse.png" alt="2024's Best Car Accident Lawyers by Expertise.com" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/top-10-trustanalityca.png" alt="Las Vegas Top 10 Car Accident Lawyers of 2024" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/logo_cv.png" alt="Notable 2024 for Strong Ethical Standards" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/Ben_J_Bingham_CR_Reviewed_300.png" alt="Martindale-Hubbell Client Reviewed" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/ClientChampion_Silver_MDH_250px_Mech.png" alt="Client Champion Silver 2024 by Martindale-Hubbell" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/million-dollar-advocates-forum-200x200-1.png" alt="Million Dollar Advocates Forum" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/NADC_logo_200.png" alt="National Association of Distinguished Counsel" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/Member-state-bar-of-nevada-200x200-1.png" alt="State Bar of Nevada" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/multi-million-dollar-advocates-forum.png" alt="Multi-Million Dollar Advocates Forum" className="form-badge-img" />
-                  <img src="https://www.bensonbingham.com/wp-content/uploads/2024/12/Top-40-under-40.png" alt="The National Trial Lawyers: Top 40 Under 40" className="form-badge-img" />
+                  <div>
+                    <img decoding="async" src="/badges/yelp.svg" alt="Benson and Bingham is 5-Star Rated on Yelp" width="318" height="214" className="form-badge-img" role="img" />
+                  </div>
+                  <div>
+                    <img decoding="async" src="/badges/google.svg" alt="5-Star Google Reviews for Benson and Bingham Car Accident and Personal Injury Lawyers" width="370" height="182" className="form-badge-img" role="img" />
+                  </div>
+                  <div>
+                    <img decoding="async" src="/badges/bbb.svg" alt="Our Personal Injury Law Firm Holds a 5-Star BBB Rating" width="417" height="182" className="form-badge-img" role="img" />
+                  </div>
+                  <div className="png-fix">
+                    <img decoding="async" src="/badges/justia.png" alt="Top-Rated Las Vegas Lawyers on Justia" width="86" height="45" className="form-badge-img" />
+                  </div>
+                  <div>
+                    <img decoding="async" src="/badges/avvo.svg" alt="Highly Rated PI Lawyers on Avvo" width="325" height="173" className="form-badge-img" role="img" />
+                  </div>
+                  <div>
+                    <img decoding="async" src="/badges/facebook.svg" alt="Las Vegas Personal Injury Law Firm with 5-Star Reviews on Facebook" width="445" height="174" className="form-badge-img" role="img" />
+                  </div>
                 </div>
               </div>
             </div>
