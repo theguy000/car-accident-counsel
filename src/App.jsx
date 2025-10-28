@@ -568,37 +568,78 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Hero Gallery */}
+          <div className="hero-gallery">
+            <div className="hero-gallery-inner">
+              <span><img loading="lazy" decoding="async" src="/badges-hero/award-1.svg" alt="Award Badge" /></span>
+              <span><img loading="lazy" decoding="async" src="/badges-hero/award-2.svg" alt="Award Badge" /></span>
+              <span><img loading="lazy" decoding="async" src="/badges-hero/award-3.svg" alt="Award Badge" /></span>
+              <span><img loading="lazy" decoding="async" src="/badges-hero/award-4.svg" alt="Award Badge" /></span>
+              <span><img loading="lazy" decoding="async" src="/badges-hero/award-5.svg" alt="Award Badge" /></span>
+              <span><img loading="lazy" decoding="async" src="/badges-hero/award-6.svg" alt="Award Badge" /></span>
+              <span><img loading="lazy" decoding="async" src="/badges-hero/award-7.svg" alt="Award Badge" /></span>
+              <span><img loading="lazy" decoding="async" src="/badges-hero/award-8.svg" alt="Award Badge" /></span>
+              <span><img loading="lazy" decoding="async" src="/badges-hero/award-9.svg" alt="Award Badge" /></span>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Results Section */}
       <section className="results-section">
         <div className="container">
+          <div className="results-section-header">
+            <h2 className="results-section-title">Notable Case Results</h2>
+            <p className="results-section-subtitle">
+              Our track record of successful settlements and verdicts for accident victims
+            </p>
+          </div>
           <div className="results-grid">
             <div className="result-card">
-              <h3 className="result-amount">$30 Million</h3>
-              <div className="result-divider"></div>
-              <h4 className="result-case">Premise Liability Claim</h4>
+              <div className="result-amount-wrapper">
+                <div className="result-amount">$30 Million</div>
+              </div>
+              <div className="result-details">
+                <p className="result-case">Settlement obtained for client in premise liability claim involving catastrophic injuries</p>
+                <span className="result-case-type">Premise Liability</span>
+              </div>
             </div>
             <div className="result-card">
-              <h3 className="result-amount">$20 Million</h3>
-              <div className="result-divider"></div>
-              <h4 className="result-case">Premise Liability Claim / Slip & Fall</h4>
+              <div className="result-amount-wrapper">
+                <div className="result-amount">$20 Million</div>
+              </div>
+              <div className="result-details">
+                <p className="result-case">Verdict awarded in slip and fall case resulting in permanent disability</p>
+                <span className="result-case-type">Slip & Fall</span>
+              </div>
             </div>
             <div className="result-card">
-              <h3 className="result-amount">$14.1 Million</h3>
-              <div className="result-divider"></div>
-              <h4 className="result-case">Bicycle Crash vs Commercial Vehicle</h4>
+              <div className="result-amount-wrapper">
+                <div className="result-amount">$14.1 Million</div>
+              </div>
+              <div className="result-details">
+                <p className="result-case">Settlement for cyclist struck by commercial vehicle causing severe injuries</p>
+                <span className="result-case-type">Vehicle Collision</span>
+              </div>
             </div>
             <div className="result-card">
-              <h3 className="result-amount">$4.25 Million</h3>
-              <div className="result-divider"></div>
-              <h4 className="result-case">Motorcycle Wreck</h4>
+              <div className="result-amount-wrapper">
+                <div className="result-amount">$4.25 Million</div>
+              </div>
+              <div className="result-details">
+                <p className="result-case">Compensation secured for motorcyclist in multi-vehicle accident</p>
+                <span className="result-case-type">Motorcycle Accident</span>
+              </div>
             </div>
             <div className="result-card">
-              <h3 className="result-amount">$3 Million</h3>
-              <div className="result-divider"></div>
-              <h4 className="result-case">Rear-End Collision/MVA</h4>
+              <div className="result-amount-wrapper">
+                <div className="result-amount">$3 Million</div>
+              </div>
+              <div className="result-details">
+                <p className="result-case">Settlement for rear-end collision victim with long-term medical needs</p>
+                <span className="result-case-type">Motor Vehicle Accident</span>
+              </div>
             </div>
           </div>
         </div>
