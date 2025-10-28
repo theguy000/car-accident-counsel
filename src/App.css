@@ -56,7 +56,7 @@ body {
   background-position: top left;
   background-size: auto 100%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px 0;
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -65,7 +65,14 @@ body {
 .header-content {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
   align-items: center;
+  padding: 20px 0;
 }
 
 .logo h1 {
@@ -80,36 +87,39 @@ body {
 
 .header-contact {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 .phone-link {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 4px;
   text-decoration: none;
   color: var(--white);
   background: var(--primary-blue);
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-weight: 600;
+  padding: 0 24px;
+  border-radius: 0;
   transition: all 0.3s ease;
   position: relative;
 }
 
 .phone-link:hover {
   background: var(--dark-blue);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
-}
-
-.phone-icon {
-  width: 20px;
-  height: 20px;
 }
 
 .phone-number {
   font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.phone-cta {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.5px;
 }
 
 /* Hero Section */
@@ -335,24 +345,31 @@ body {
   margin-bottom: 20px;
   animation: fadeInUp 0.8s ease-out;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.5px;
 }
 
 .trust-badge-inline {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   color: var(--white);
-  background: rgba(255, 255, 255, 0.2);
-  padding: 6px 14px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  border: none;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .trust-separator {
   color: rgba(255, 255, 255, 0.6);
   font-weight: 300;
   font-size: 18px;
+  margin: 0 5px;
 }
 
 .hero-title {
@@ -444,42 +461,33 @@ body {
 .btn-hero-phone {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
-  background: var(--white);
-  color: var(--primary-blue);
+  background: var(--primary-blue);
+  color: var(--white);
   padding: 20px 35px;
-  border-radius: 50px;
+  border-radius: 0;
   text-decoration: none;
   font-weight: 700;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  animation: pulse-cta 2s ease-in-out infinite;
+  box-shadow: none;
+  animation: none;
   position: relative;
   overflow: hidden;
 }
 
 .btn-hero-phone::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(30, 58, 138, 0.1);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  display: none;
 }
 
 .btn-hero-phone:hover::before {
-  width: 400px;
-  height: 400px;
+  display: none;
 }
 
 .btn-hero-phone:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-  animation: none;
+  background: var(--dark-blue);
+  transform: none;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
 
 @keyframes pulse-cta {
@@ -522,39 +530,29 @@ body {
 
 .hero-features {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-top: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 0.5px;
 }
 
-.feature-badge {
-  background: rgba(255, 255, 255, 0.15);
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 500;
-  backdrop-filter: blur(10px);
+.hero-feature-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  transition: all 0.3s ease;
+  gap: 8px;
+  white-space: nowrap;
 }
 
-.feature-badge:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-}
-
-.feature-icon {
-  width: 22px;
-  height: 22px;
-  stroke-width: 2;
+.checkmark-icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--white);
   flex-shrink: 0;
-}
-
-.feature-badge span {
-  font-size: 15px;
-  letter-spacing: 0.3px;
 }
 
 /* Results Section - Professional Card Grid */
@@ -1894,11 +1892,11 @@ body {
 
   .hero-cta {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero-features {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero-particles {
@@ -2174,11 +2172,11 @@ body {
   .hero-trust-line {
     gap: 8px;
     margin-bottom: 15px;
+    font-size: 14px;
   }
 
   .trust-badge-inline {
-    font-size: 11px;
-    padding: 5px 10px;
+    font-size: 14px;
   }
 
   .trust-separator {
@@ -2232,11 +2230,9 @@ body {
   }
 
   .hero-features {
-    flex-direction: column;
-  }
-
-  .feature-badge {
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 14px;
   }
 
   .results-section {

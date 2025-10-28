@@ -191,10 +191,8 @@ function App() {
             </div>
             <div className="header-contact">
               <a href="tel:1-866-555-0123" className="phone-link">
-                <svg className="phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
                 <span className="phone-number">(866) 555-0123</span>
+                <span className="phone-cta">GET A FREE CONSULTATION 24/7</span>
               </a>
             </div>
           </div>
@@ -236,33 +234,31 @@ function App() {
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                   </svg>
                   <div className="phone-cta-content">
-                    <span className="phone-cta-label">Call Now for Free Consultation</span>
+                    <span className="phone-cta-label">Get Your Free Case Evaluation</span>
                     <span className="phone-cta-number">(866) 555-0123</span>
                   </div>
                 </a>
               </div>
 
               <div className="hero-features">
-                <div className="feature-badge">
-                  <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <span className="hero-feature-item">
+                  <svg className="checkmark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span>Free Consultation</span>
-                </div>
-                <div className="feature-badge">
-                  <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <line x1="12" y1="1" x2="12" y2="23"></line>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  Free Consultation
+                </span>
+                <span className="hero-feature-item">
+                  <svg className="checkmark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span>No Win, No Fee</span>
-                </div>
-                <div className="feature-badge">
-                  <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
+                  No Win, No Fee
+                </span>
+                <span className="hero-feature-item">
+                  <svg className="checkmark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span>24/7 Support</span>
-                </div>
+                  24/7 Support
+                </span>
               </div>
             </div>
 
