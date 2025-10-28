@@ -190,7 +190,7 @@ function App() {
         <div className="container">
           <div className="header-content">
             <div className="logo">
-              <h1>AccidentCounsel<span className="pro">Pro</span></h1>
+              <img src="/logo.png" alt="AccidentCounsel Pro" className="logo-img" />
             </div>
             <div className="header-contact">
               <a href="tel:1-866-555-0123" className="phone-link">

@@ -75,6 +75,12 @@ body {
   padding: 20px 0;
 }
 
+.logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
 .logo h1 {
   font-size: 28px;
   color: var(--text-dark);
