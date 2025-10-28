@@ -24,6 +24,19 @@ function App() {
     phone: ''
   })
 
+  // Testimonial slider settings
+  const testimonialSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    arrows: true,
+    pauseOnHover: true
+  }
+
   // Validation functions
   const validateName = (name) => {
     const trimmedName = name.trim()
@@ -698,35 +711,195 @@ function App() {
       {/* Trust Indicators */}
       <section className="trust-section">
         <div className="container">
+          <div className="trust-header">
+            <h2>Trusted by Accident Victims Nationwide</h2>
+            <p>Our commitment to excellence has earned us recognition from clients and industry leaders alike</p>
+          </div>
+
           <div className="trust-grid">
             <div className="trust-item">
-              <div className="trust-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
-                </svg>
-              </div>
-              <h3>Proven Track Record</h3>
-              <p>Successfully represented thousands of accident victims</p>
+              <div className="trust-number">$67M+</div>
+              <h3>Recovered for Clients</h3>
+              <p>We've secured over $67 million in compensation for accident victims and their families</p>
             </div>
+
             <div className="trust-item">
-              <div className="trust-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-              </div>
-              <h3>100% Satisfaction Guarantee</h3>
-              <p>We're committed to getting you the best outcome</p>
+              <div className="trust-number">5,000+</div>
+              <h3>Cases Successfully Resolved</h3>
+              <p>Thousands of satisfied clients who received the justice they deserved</p>
             </div>
+
             <div className="trust-item">
-              <div className="trust-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <h3>Expert Legal Team</h3>
-              <p>Experienced attorneys specializing in accident law</p>
+              <div className="trust-number">95%</div>
+              <h3>Success Rate</h3>
+              <p>Our proven track record speaks for itself - we win the vast majority of cases we take</p>
             </div>
+
+            <div className="trust-item">
+              <div className="trust-number">25+</div>
+              <h3>Years of Experience</h3>
+              <p>Over two decades fighting for accident victims' rights and maximum compensation</p>
+            </div>
+          </div>
+
+          <div className="trust-testimonial-slider">
+            <Slider {...testimonialSettings}>
+              <div className="trust-testimonial">
+                <div className="testimonial-stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                </div>
+                <blockquote className="testimonial-quote">
+                  "I can't express how grateful I am for the outstanding service provided by Chris Burk and his team. They truly went above and beyond, making the entire process as easy as possible for me. From handling all the necessary paperwork to taking care of the details, they did the dirty work, allowing me to focus on my recovery. Thank you for your professionalism, efficiency, and genuine care. I highly recommend their services to anyone in need."
+                </blockquote>
+                <div className="testimonial-author">
+                  <strong>L.T.</strong>
+                </div>
+              </div>
+
+              <div className="trust-testimonial">
+                <div className="testimonial-stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                </div>
+                <blockquote className="testimonial-quote">
+                  "Chris works hard to get you the cash and care you deserve. His professional and friendly staff provide excellent support throughout the entire process. Chris supports veterans and made it his personal mission to help me and my family, thank you!"
+                </blockquote>
+                <div className="testimonial-author">
+                  <strong>Michael Tomasello</strong>
+                </div>
+              </div>
+
+              <div className="trust-testimonial">
+                <div className="testimonial-stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                </div>
+                <blockquote className="testimonial-quote">
+                  "After my accident, I was overwhelmed and didn't know where to turn. This team fought tirelessly for me and recovered over $380,000. They truly care about their clients and getting justice."
+                </blockquote>
+                <div className="testimonial-author">
+                  <strong>Jennifer M.</strong> <span>Car Accident Victim</span>
+                </div>
+              </div>
+
+              <div className="trust-testimonial">
+                <div className="testimonial-stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                </div>
+                <blockquote className="testimonial-quote">
+                  "The team was incredibly responsive and kept me informed every step of the way. They secured a settlement that exceeded my expectations and made sure I received the medical care I needed. Highly professional and compassionate."
+                </blockquote>
+                <div className="testimonial-author">
+                  <strong>Robert K.</strong> <span>Rear-End Collision Victim</span>
+                </div>
+              </div>
+
+              <div className="trust-testimonial">
+                <div className="testimonial-stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                </div>
+                <blockquote className="testimonial-quote">
+                  "I was hesitant to hire a lawyer, but I'm so glad I did. They handled everything with the insurance company and got me a fair settlement. No upfront costs and they delivered on every promise. Thank you for fighting for me!"
+                </blockquote>
+                <div className="testimonial-author">
+                  <strong>Sarah P.</strong> <span>T-Bone Accident Survivor</span>
+                </div>
+              </div>
+
+              <div className="trust-testimonial">
+                <div className="testimonial-stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                  </svg>
+                </div>
+                <blockquote className="testimonial-quote">
+                  "From the first consultation to the final settlement, this firm showed nothing but dedication and expertise. They recovered $520,000 for my injuries and lost wages. I couldn't have asked for better representation."
+                </blockquote>
+                <div className="testimonial-author">
+                  <strong>David H.</strong> <span>Head-On Collision Victim</span>
+                </div>
+              </div>
+            </Slider>
           </div>
         </div>
       </section>
@@ -756,28 +929,6 @@ function App() {
                 the financial burdens to be shouldered by the little guy. <strong>Innocent victims should never be left to pay.</strong>
                 That's why we're here: to level the playing field and ensure you get the justice and compensation you deserve.
               </p>
-            </div>
-          </div>
-
-          <div className="why-choose-stats-bar">
-            <div className="stat-item">
-              <div className="stat-value">$67M+</div>
-              <div className="stat-label">Recovered for Clients</div>
-            </div>
-            <div className="stat-divider-vertical"></div>
-            <div className="stat-item">
-              <div className="stat-value">25+</div>
-              <div className="stat-label">Years Experience</div>
-            </div>
-            <div className="stat-divider-vertical"></div>
-            <div className="stat-item">
-              <div className="stat-value">5,000+</div>
-              <div className="stat-label">Cases Won</div>
-            </div>
-            <div className="stat-divider-vertical"></div>
-            <div className="stat-item">
-              <div className="stat-value">95%</div>
-              <div className="stat-label">Success Rate</div>
             </div>
           </div>
 
