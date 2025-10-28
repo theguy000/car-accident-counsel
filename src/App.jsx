@@ -215,10 +215,18 @@ function App() {
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
-              <h2 className="hero-title">Expert Legal Counsel for Car Accident Victims</h2>
+              <div className="hero-trust-line">
+                <span className="trust-badge-inline">25+ Years Experience</span>
+                <span className="trust-separator">•</span>
+                <span className="trust-badge-inline">5,000+ Cases Won</span>
+                <span className="trust-separator">•</span>
+                <span className="trust-badge-inline">$67M+ Recovered</span>
+              </div>
+
+              <h2 className="hero-title">Award-Winning Car Accident Attorneys Fighting for Your Rights</h2>
 
               <p className="hero-subtitle">
-                Get the compensation you deserve. Our experienced attorneys fight for your rights.
+                Free consultation. No fees unless we win. Maximum compensation guaranteed.
               </p>
 
               {/* CTA Phone Button */}
@@ -236,50 +244,30 @@ function App() {
 
               <div className="hero-features">
                 <div className="feature-badge">
-                  <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <polyline points="20 6 9 17 4 12"></polyline>
+                  <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                   </svg>
-                  Free Consultation
+                  <span>Free Consultation</span>
                 </div>
                 <div className="feature-badge">
-                  <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <polyline points="20 6 9 17 4 12"></polyline>
+                  <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                   </svg>
-                  No Win, No Fee
+                  <span>No Win, No Fee</span>
                 </div>
                 <div className="feature-badge">
-                  <svg className="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <polyline points="20 6 9 17 4 12"></polyline>
+                  <svg className="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
-                  24/7 Support
+                  <span>24/7 Support</span>
                 </div>
               </div>
             </div>
 
             {/* Qualification Form */}
             <div className="form-wrapper">
-              {/* Arrow pointing to form from bottom-left */}
-              <div className="arrow-container">
-                <svg className="curved-arrow" viewBox="0 0 180 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Slim curved line pointing up and right to form */}
-                  <path
-                    d="M 25 110 Q 50 70, 100 50 Q 130 40, 150 35"
-                    stroke="white"
-                    strokeWidth="4"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  {/* Large prominent arrowhead/pointer at the top */}
-                  <path
-                    d="M 150 35 L 130 45 L 140 35 L 130 25 Z"
-                    fill="white"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </div>
               <div className="qualification-form">
                 <div className="form-header">
                   <div className="form-header-left">

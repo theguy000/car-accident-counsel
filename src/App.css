@@ -95,26 +95,12 @@ body {
   font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.7);
-  }
-
-  50% {
-    box-shadow: 0 0 0 10px rgba(30, 58, 138, 0);
-  }
 }
 
 .phone-link:hover {
   background: var(--dark-blue);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
-  animation: none;
 }
 
 .phone-icon {
@@ -342,12 +328,39 @@ body {
   padding-right: 20px;
 }
 
+.hero-trust-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease-out;
+  flex-wrap: wrap;
+}
+
+.trust-badge-inline {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.trust-separator {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  font-size: 18px;
+}
+
 .hero-title {
   font-size: 64px;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 22px;
-  animation: fadeInUp 0.8s ease-out;
+  animation: fadeInUp 0.8s ease-out 0.1s backwards;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -515,20 +528,33 @@ body {
 }
 
 .feature-badge {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: 600;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
-.check-icon {
-  width: 18px;
-  height: 18px;
-  stroke-width: 3;
+.feature-badge:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+.feature-badge span {
+  font-size: 15px;
+  letter-spacing: 0.3px;
 }
 
 /* Results Section - Professional Card Grid */
@@ -633,96 +659,7 @@ body {
   width: fit-content;
 }
 
-/* Arrow Animation */
-.arrow-container {
-  position: absolute;
-  bottom: -80px;
-  left: -160px;
-  width: 170px;
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: flipInVerticalShake 0.5s ease-in-out forwards, neon-fade-in 0.8s ease-in 0.5s forwards, neon-pulse 2s ease-in-out 1.5s infinite, arrow-bounce 2s ease-in-out 2s infinite;
-  z-index: 10;
-  filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
-}
 
-.curved-arrow {
-  width: 100%;
-  height: 100%;
-  animation: reveal-arrow 0.5s ease-in-out 0.5s forwards;
-  clip-path: inset(0 100% 0 0);
-  opacity: 1;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
-}
-
-@keyframes reveal-arrow {
-  0% {
-    clip-path: inset(0 100% 0 0);
-    opacity: 1;
-  }
-
-  100% {
-    clip-path: inset(0);
-    opacity: 1;
-  }
-}
-
-@keyframes flipInVerticalShake {
-  0% {
-    transform: rotateX(-70deg);
-    opacity: 0;
-  }
-
-  60% {
-    opacity: 1;
-    transform: rotateX(10deg);
-  }
-
-  90% {
-    transform: rotateX(-5deg);
-  }
-
-  100% {
-    transform: rotateX(0deg);
-    opacity: 1;
-  }
-}
-
-@keyframes neon-fade-in {
-  0% {
-    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
-  }
-
-  100% {
-    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
-  }
-}
-
-@keyframes neon-pulse {
-
-  0%,
-  100% {
-    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.5));
-  }
-
-  50% {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)) drop-shadow(0 0 18px rgba(255, 255, 255, 0.7));
-  }
-}
-
-@keyframes arrow-bounce {
-
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(8px, -8px);
-  }
-}
 
 /* Qualification Form Wrapper */
 .form-wrapper {
@@ -1964,10 +1901,6 @@ body {
     justify-content: center;
   }
 
-  .arrow-container {
-    display: none;
-  }
-
   .hero-particles {
     display: none;
   }
@@ -2236,6 +2169,20 @@ body {
 
   .hero-title {
     font-size: 28px;
+  }
+
+  .hero-trust-line {
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  .trust-badge-inline {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .trust-separator {
+    font-size: 14px;
   }
 
   .stat-number {
