@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import './App.css'
 
 function App() {
@@ -570,61 +573,124 @@ function App() {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Results Section - Slick Carousel */}
       <section className="results-section">
         <div className="container">
           <div className="results-section-header">
-            <h2 className="results-section-title">Notable Case Results</h2>
+            <h2 className="results-section-title">Verdicts & Settlements</h2>
             <p className="results-section-subtitle">
-              Our track record of successful settlements and verdicts for accident victims
+              Over $67 Million recovered for our clients - Our track record speaks for itself
             </p>
           </div>
-          <div className="results-grid">
-            <div className="result-card">
-              <div className="result-amount-wrapper">
-                <div className="result-amount">$30 Million</div>
+          <div className="results-carousel-container">
+            <Slider
+              className="results-carousel"
+              dots={false}
+              infinite={true}
+              speed={600}
+              slidesToShow={4}
+              slidesToScroll={1}
+              autoplay={false}
+              cssEase="ease-in-out"
+              rows={1}
+              slidesPerRow={1}
+              responsive={[
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    rows: 1,
+                    slidesPerRow: 1,
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    rows: 1,
+                    slidesPerRow: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    rows: 1,
+                    slidesPerRow: 1,
+                  }
+                }
+              ]}
+            >
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$30 Million</div>
+                  <div className="result-divider"></div>
+                  <p className="result-case">Premise Liability Settlement</p>
+                </div>
               </div>
-              <div className="result-details">
-                <p className="result-case">Settlement obtained for client in premise liability claim involving catastrophic injuries</p>
-                <span className="result-case-type">Premise Liability</span>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$20 Million</div>
+                  <div className="result-divider"></div>
+                  <p className="result-case">Slip & Fall Verdict</p>
+                </div>
               </div>
-            </div>
-            <div className="result-card">
-              <div className="result-amount-wrapper">
-                <div className="result-amount">$20 Million</div>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$14.1 Million</div>
+                  <div className="result-divider"></div>
+                  <p className="result-case">Commercial Vehicle Collision</p>
+                </div>
               </div>
-              <div className="result-details">
-                <p className="result-case">Verdict awarded in slip and fall case resulting in permanent disability</p>
-                <span className="result-case-type">Slip & Fall</span>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$4.25 Million</div>
+                  <div className="result-divider"></div>
+                  <p className="result-case">Multi-Vehicle Accident</p>
+                </div>
               </div>
-            </div>
-            <div className="result-card">
-              <div className="result-amount-wrapper">
-                <div className="result-amount">$14.1 Million</div>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$3 Million</div>
+                  <div className="result-divider"></div>
+                  <p className="result-case">Rear-End Collision</p>
+                </div>
               </div>
-              <div className="result-details">
-                <p className="result-case">Settlement for cyclist struck by commercial vehicle causing severe injuries</p>
-                <span className="result-case-type">Vehicle Collision</span>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$2.5 Million</div>
+                  <div className="result-divider"></div>
+                  <p className="result-case">Motorcycle Accident</p>
+                </div>
               </div>
-            </div>
-            <div className="result-card">
-              <div className="result-amount-wrapper">
-                <div className="result-amount">$4.25 Million</div>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$990,000</div>
+                  <div className="result-divider"></div>
+                  <p className="result-case">Semi-Truck Collision</p>
+                </div>
               </div>
-              <div className="result-details">
-                <p className="result-case">Compensation secured for motorcyclist in multi-vehicle accident</p>
-                <span className="result-case-type">Motorcycle Accident</span>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$650,000</div>
+                  <div className="result-divider"></div>
+                  <p className="result-case">Motor Vehicle Accident</p>
+                </div>
               </div>
-            </div>
-            <div className="result-card">
-              <div className="result-amount-wrapper">
-                <div className="result-amount">$3 Million</div>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$500,000</div>
+                  <div className="result-divider"></div>
+                  <p className="result-case">Car Accident Settlement</p>
+                </div>
               </div>
-              <div className="result-details">
-                <p className="result-case">Settlement for rear-end collision victim with long-term medical needs</p>
-                <span className="result-case-type">Motor Vehicle Accident</span>
-              </div>
-            </div>
+            </Slider>
           </div>
         </div>
       </section>
