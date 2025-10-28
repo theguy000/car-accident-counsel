@@ -294,278 +294,278 @@ function App() {
                 {/* Progress Bar */}
                 <div className="form-progress-container">
                   <div className="form-progress-bar">
-                    <div className="form-progress-fill" style={{width: `${(formStep / 5) * 100}%`}}></div>
+                    <div className="form-progress-fill" style={{ width: `${(formStep / 5) * 100}%` }}></div>
                   </div>
                 </div>
 
                 <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
 
-                {formStep === 1 && (
-                  <div className="form-step">
-                    <label htmlFor="injuryType">What type of injuries did you sustain?</label>
-                    <div className="custom-dropdown">
-                      <div
-                        className={`dropdown-selected ${dropdownOpen.injuryType ? 'open' : ''}`}
-                        onClick={() => toggleDropdown('injuryType')}
-                      >
-                        {formData.injuryType ?
-                          (formData.injuryType === 'minor' ? 'Minor injuries (cuts, bruises)' :
-                           formData.injuryType === 'moderate' ? 'Moderate injuries (fractures, sprains)' :
-                           formData.injuryType === 'severe' ? 'Severe injuries (head trauma, spinal injury)' :
-                           'Wrongful death')
-                          : 'Select injury type'}
-                        <svg className="dropdown-icon" viewBox="0 0 20 20" fill="none">
-                          <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" fill="currentColor"/>
-                        </svg>
-                      </div>
-                      {dropdownOpen.injuryType && (
-                        <div className="dropdown-options">
-                          <div className="dropdown-option" onClick={() => selectOption('injuryType', 'minor')}>
-                            <div className="option-icon minor-icon">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                              </svg>
-                            </div>
-                            <div className="option-content">
-                              <div className="option-title">Minor injuries</div>
-                              <div className="option-desc">Cuts, bruises, minor pain</div>
-                            </div>
-                          </div>
-                          <div className="dropdown-option" onClick={() => selectOption('injuryType', 'moderate')}>
-                            <div className="option-icon moderate-icon">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                              </svg>
-                            </div>
-                            <div className="option-content">
-                              <div className="option-title">Moderate injuries</div>
-                              <div className="option-desc">Fractures, sprains, significant pain</div>
-                            </div>
-                          </div>
-                          <div className="dropdown-option" onClick={() => selectOption('injuryType', 'severe')}>
-                            <div className="option-icon severe-icon">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
-                                <line x1="12" y1="9" x2="12" y2="13"/>
-                                <circle cx="12" cy="17" r="0.5" fill="currentColor"/>
-                              </svg>
-                            </div>
-                            <div className="option-content">
-                              <div className="option-title">Severe injuries</div>
-                              <div className="option-desc">Head trauma, spinal injury, hospitalization</div>
-                            </div>
-                          </div>
-                          <div className="dropdown-option" onClick={() => selectOption('injuryType', 'fatal')}>
-                            <div className="option-icon fatal-icon">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <line x1="12" y1="8" x2="12" y2="12"/>
-                                <circle cx="12" cy="16" r="0.5" fill="currentColor"/>
-                              </svg>
-                            </div>
-                            <div className="option-content">
-                              <div className="option-title">Wrongful death</div>
-                              <div className="option-desc">Fatal accident, loss of loved one</div>
-                            </div>
-                          </div>
+                  {formStep === 1 && (
+                    <div className="form-step">
+                      <label htmlFor="injuryType">What type of injuries did you sustain?</label>
+                      <div className="custom-dropdown">
+                        <div
+                          className={`dropdown-selected ${dropdownOpen.injuryType ? 'open' : ''}`}
+                          onClick={() => toggleDropdown('injuryType')}
+                        >
+                          {formData.injuryType ?
+                            (formData.injuryType === 'minor' ? 'Minor injuries (cuts, bruises)' :
+                              formData.injuryType === 'moderate' ? 'Moderate injuries (fractures, sprains)' :
+                                formData.injuryType === 'severe' ? 'Severe injuries (head trauma, spinal injury)' :
+                                  'Wrongful death')
+                            : 'Select injury type'}
+                          <svg className="dropdown-icon" viewBox="0 0 20 20" fill="none">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" fill="currentColor" />
+                          </svg>
                         </div>
-                      )}
-                    </div>
-                    <button type="button" onClick={handleNext} className="btn-next">
-                      Next
-                    </button>
-                  </div>
-                )}
-
-                {formStep === 2 && (
-                  <div className="form-step">
-                    <label htmlFor="accidentDate">When did the accident occur?</label>
-                    <div className="custom-dropdown">
-                      <div
-                        className={`dropdown-selected ${dropdownOpen.accidentDate ? 'open' : ''}`}
-                        onClick={() => toggleDropdown('accidentDate')}
-                      >
-                        {formData.accidentDate ?
-                          (formData.accidentDate === 'last-week' ? 'Within the last week' :
-                           formData.accidentDate === 'last-month' ? 'Within the last month' :
-                           formData.accidentDate === '1-6-months' ? '1-6 months ago' :
-                           formData.accidentDate === '6-12-months' ? '6-12 months ago' :
-                           'Over a year ago')
-                          : 'Select timeframe'}
-                        <svg className="dropdown-icon" viewBox="0 0 20 20" fill="none">
-                          <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" fill="currentColor"/>
-                        </svg>
+                        {dropdownOpen.injuryType && (
+                          <div className="dropdown-options">
+                            <div className="dropdown-option" onClick={() => selectOption('injuryType', 'minor')}>
+                              <div className="option-icon minor-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                  <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                                </svg>
+                              </div>
+                              <div className="option-content">
+                                <div className="option-title">Minor injuries</div>
+                                <div className="option-desc">Cuts, bruises, minor pain</div>
+                              </div>
+                            </div>
+                            <div className="dropdown-option" onClick={() => selectOption('injuryType', 'moderate')}>
+                              <div className="option-icon moderate-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                              </div>
+                              <div className="option-content">
+                                <div className="option-title">Moderate injuries</div>
+                                <div className="option-desc">Fractures, sprains, significant pain</div>
+                              </div>
+                            </div>
+                            <div className="dropdown-option" onClick={() => selectOption('injuryType', 'severe')}>
+                              <div className="option-icon severe-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                                  <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                                  <line x1="12" y1="9" x2="12" y2="13" />
+                                  <circle cx="12" cy="17" r="0.5" fill="currentColor" />
+                                </svg>
+                              </div>
+                              <div className="option-content">
+                                <div className="option-title">Severe injuries</div>
+                                <div className="option-desc">Head trauma, spinal injury, hospitalization</div>
+                              </div>
+                            </div>
+                            <div className="dropdown-option" onClick={() => selectOption('injuryType', 'fatal')}>
+                              <div className="option-icon fatal-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                                  <circle cx="12" cy="12" r="10" />
+                                  <line x1="12" y1="8" x2="12" y2="12" />
+                                  <circle cx="12" cy="16" r="0.5" fill="currentColor" />
+                                </svg>
+                              </div>
+                              <div className="option-content">
+                                <div className="option-title">Wrongful death</div>
+                                <div className="option-desc">Fatal accident, loss of loved one</div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
                       </div>
-                      {dropdownOpen.accidentDate && (
-                        <div className="dropdown-options">
-                          <div className="dropdown-option" onClick={() => selectOption('accidentDate', 'last-week')}>
-                            <div className="option-icon recent-icon">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                              </svg>
-                            </div>
-                            <div className="option-content">
-                              <div className="option-title">Within the last week</div>
-                              <div className="option-desc">Very recent accident, fresh evidence</div>
-                            </div>
-                          </div>
-                          <div className="dropdown-option" onClick={() => selectOption('accidentDate', 'last-month')}>
-                            <div className="option-icon recent-icon">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                              </svg>
-                            </div>
-                            <div className="option-content">
-                              <div className="option-title">Within the last month</div>
-                              <div className="option-desc">Recent accident, good timeframe for claims</div>
-                            </div>
-                          </div>
-                          <div className="dropdown-option" onClick={() => selectOption('accidentDate', '1-6-months')}>
-                            <div className="option-icon medium-icon">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                                <line x1="16" y1="2" x2="16" y2="6"/>
-                                <line x1="8" y1="2" x2="8" y2="6"/>
-                                <line x1="3" y1="10" x2="21" y2="10"/>
-                                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/>
-                              </svg>
-                            </div>
-                            <div className="option-content">
-                              <div className="option-title">1-6 months ago</div>
-                              <div className="option-desc">Still within statute of limitations</div>
-                            </div>
-                          </div>
-                          <div className="dropdown-option" onClick={() => selectOption('accidentDate', '6-12-months')}>
-                            <div className="option-icon medium-icon">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-                              </svg>
-                            </div>
-                            <div className="option-content">
-                              <div className="option-title">6-12 months ago</div>
-                              <div className="option-desc">Act soon, time-sensitive claim</div>
-                            </div>
-                          </div>
-                          <div className="dropdown-option" onClick={() => selectOption('accidentDate', 'over-year')}>
-                            <div className="option-icon old-icon">
-                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                              </svg>
-                            </div>
-                            <div className="option-content">
-                              <div className="option-title">Over a year ago</div>
-                              <div className="option-desc">May have statute limitations, consult immediately</div>
-                            </div>
-                          </div>
-                        </div>
-                      )}
+                      <button type="button" onClick={handleNext} className="btn-next">
+                        Next
+                      </button>
                     </div>
-                    <button type="button" onClick={handleNext} className="btn-next">
-                      Next
-                    </button>
-                  </div>
-                )}
+                  )}
 
-                {formStep === 3 && (
-                  <div className="form-step">
-                    <label htmlFor="name">What is your name?</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Full Name"
-                      required
-                      className={validationErrors.name ? 'input-error' : ''}
-                    />
-                    {validationErrors.name && (
-                      <div className="error-message">{validationErrors.name}</div>
-                    )}
-                    <button type="button" onClick={handleNext} className="btn-next">
-                      Next
-                    </button>
-                  </div>
-                )}
+                  {formStep === 2 && (
+                    <div className="form-step">
+                      <label htmlFor="accidentDate">When did the accident occur?</label>
+                      <div className="custom-dropdown">
+                        <div
+                          className={`dropdown-selected ${dropdownOpen.accidentDate ? 'open' : ''}`}
+                          onClick={() => toggleDropdown('accidentDate')}
+                        >
+                          {formData.accidentDate ?
+                            (formData.accidentDate === 'last-week' ? 'Within the last week' :
+                              formData.accidentDate === 'last-month' ? 'Within the last month' :
+                                formData.accidentDate === '1-6-months' ? '1-6 months ago' :
+                                  formData.accidentDate === '6-12-months' ? '6-12 months ago' :
+                                    'Over a year ago')
+                            : 'Select timeframe'}
+                          <svg className="dropdown-icon" viewBox="0 0 20 20" fill="none">
+                            <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" fill="currentColor" />
+                          </svg>
+                        </div>
+                        {dropdownOpen.accidentDate && (
+                          <div className="dropdown-options">
+                            <div className="dropdown-option" onClick={() => selectOption('accidentDate', 'last-week')}>
+                              <div className="option-icon recent-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <circle cx="12" cy="12" r="10" />
+                                  <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                              </div>
+                              <div className="option-content">
+                                <div className="option-title">Within the last week</div>
+                                <div className="option-desc">Very recent accident, fresh evidence</div>
+                              </div>
+                            </div>
+                            <div className="dropdown-option" onClick={() => selectOption('accidentDate', 'last-month')}>
+                              <div className="option-icon recent-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                  <line x1="16" y1="2" x2="16" y2="6" />
+                                  <line x1="8" y1="2" x2="8" y2="6" />
+                                  <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                              </div>
+                              <div className="option-content">
+                                <div className="option-title">Within the last month</div>
+                                <div className="option-desc">Recent accident, good timeframe for claims</div>
+                              </div>
+                            </div>
+                            <div className="dropdown-option" onClick={() => selectOption('accidentDate', '1-6-months')}>
+                              <div className="option-icon medium-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                  <line x1="16" y1="2" x2="16" y2="6" />
+                                  <line x1="8" y1="2" x2="8" y2="6" />
+                                  <line x1="3" y1="10" x2="21" y2="10" />
+                                  <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" />
+                                </svg>
+                              </div>
+                              <div className="option-content">
+                                <div className="option-title">1-6 months ago</div>
+                                <div className="option-desc">Still within statute of limitations</div>
+                              </div>
+                            </div>
+                            <div className="dropdown-option" onClick={() => selectOption('accidentDate', '6-12-months')}>
+                              <div className="option-icon medium-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <circle cx="12" cy="12" r="10" />
+                                  <polyline points="12 6 12 12 16 14" />
+                                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                                </svg>
+                              </div>
+                              <div className="option-content">
+                                <div className="option-title">6-12 months ago</div>
+                                <div className="option-desc">Act soon, time-sensitive claim</div>
+                              </div>
+                            </div>
+                            <div className="dropdown-option" onClick={() => selectOption('accidentDate', 'over-year')}>
+                              <div className="option-icon old-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <circle cx="12" cy="12" r="10" />
+                                  <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                              </div>
+                              <div className="option-content">
+                                <div className="option-title">Over a year ago</div>
+                                <div className="option-desc">May have statute limitations, consult immediately</div>
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <button type="button" onClick={handleNext} className="btn-next">
+                        Next
+                      </button>
+                    </div>
+                  )}
 
-                {formStep === 4 && (
-                  <div className="form-step">
-                    <label htmlFor="email">What is your email?</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="your@email.com"
-                      required
-                      className={validationErrors.email ? 'input-error' : ''}
-                    />
-                    {validationErrors.email && (
-                      <div className="error-message">{validationErrors.email}</div>
-                    )}
-                    <button type="button" onClick={handleNext} className="btn-next">
-                      Next
-                    </button>
-                  </div>
-                )}
+                  {formStep === 3 && (
+                    <div className="form-step">
+                      <label htmlFor="name">What is your name?</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="Full Name"
+                        required
+                        className={validationErrors.name ? 'input-error' : ''}
+                      />
+                      {validationErrors.name && (
+                        <div className="error-message">{validationErrors.name}</div>
+                      )}
+                      <button type="button" onClick={handleNext} className="btn-next">
+                        Next
+                      </button>
+                    </div>
+                  )}
 
-                {formStep === 5 && (
-                  <div className="form-step">
-                    <label htmlFor="phone">What is your phone number?</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder="(555) 123-4567"
-                      required
-                      className={validationErrors.phone ? 'input-error' : ''}
-                    />
-                    {validationErrors.phone && (
-                      <div className="error-message">{validationErrors.phone}</div>
-                    )}
-                    <button type="submit" className="btn-submit">
-                      Get My Free Consultation
-                    </button>
-                  </div>
-                )}
-              </form>
+                  {formStep === 4 && (
+                    <div className="form-step">
+                      <label htmlFor="email">What is your email?</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="your@email.com"
+                        required
+                        className={validationErrors.email ? 'input-error' : ''}
+                      />
+                      {validationErrors.email && (
+                        <div className="error-message">{validationErrors.email}</div>
+                      )}
+                      <button type="button" onClick={handleNext} className="btn-next">
+                        Next
+                      </button>
+                    </div>
+                  )}
 
-              {/* Review Platform Badges */}
-              <div className="form-badges">
-                <h4 className="form-badges-title">Trusted By Clients Across All Platforms</h4>
-                <div className="form-badges-grid">
-                  <div>
-                    <img decoding="async" src="/badges/yelp.svg" alt="Benson and Bingham is 5-Star Rated on Yelp" width="318" height="214" className="form-badge-img" role="img" />
-                  </div>
-                  <div>
-                    <img decoding="async" src="/badges/google.svg" alt="5-Star Google Reviews for Benson and Bingham Car Accident and Personal Injury Lawyers" width="370" height="182" className="form-badge-img" role="img" />
-                  </div>
-                  <div>
-                    <img decoding="async" src="/badges/bbb.svg" alt="Our Personal Injury Law Firm Holds a 5-Star BBB Rating" width="417" height="182" className="form-badge-img" role="img" />
-                  </div>
-                  <div className="png-fix">
-                    <img decoding="async" src="/badges/justia.png" alt="Top-Rated Las Vegas Lawyers on Justia" width="86" height="45" className="form-badge-img" />
-                  </div>
-                  <div>
-                    <img decoding="async" src="/badges/avvo.svg" alt="Highly Rated PI Lawyers on Avvo" width="325" height="173" className="form-badge-img" role="img" />
-                  </div>
-                  <div>
-                    <img decoding="async" src="/badges/facebook.svg" alt="Las Vegas Personal Injury Law Firm with 5-Star Reviews on Facebook" width="445" height="174" className="form-badge-img" role="img" />
+                  {formStep === 5 && (
+                    <div className="form-step">
+                      <label htmlFor="phone">What is your phone number?</label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        placeholder="(555) 123-4567"
+                        required
+                        className={validationErrors.phone ? 'input-error' : ''}
+                      />
+                      {validationErrors.phone && (
+                        <div className="error-message">{validationErrors.phone}</div>
+                      )}
+                      <button type="submit" className="btn-submit">
+                        Get My Free Consultation
+                      </button>
+                    </div>
+                  )}
+                </form>
+
+                {/* Review Platform Badges */}
+                <div className="form-badges">
+                  <h4 className="form-badges-title">Trusted By Clients Across All Platforms</h4>
+                  <div className="form-badges-grid">
+                    <div>
+                      <img decoding="async" src="/badges/yelp.svg" alt="Benson and Bingham is 5-Star Rated on Yelp" width="318" height="214" className="form-badge-img" role="img" />
+                    </div>
+                    <div>
+                      <img decoding="async" src="/badges/google.svg" alt="5-Star Google Reviews for Benson and Bingham Car Accident and Personal Injury Lawyers" width="370" height="182" className="form-badge-img" role="img" />
+                    </div>
+                    <div>
+                      <img decoding="async" src="/badges/bbb.svg" alt="Our Personal Injury Law Firm Holds a 5-Star BBB Rating" width="417" height="182" className="form-badge-img" role="img" />
+                    </div>
+                    <div className="png-fix">
+                      <img decoding="async" src="/badges/justia.png" alt="Top-Rated Las Vegas Lawyers on Justia" width="86" height="45" className="form-badge-img" />
+                    </div>
+                    <div>
+                      <img decoding="async" src="/badges/avvo.svg" alt="Highly Rated PI Lawyers on Avvo" width="325" height="173" className="form-badge-img" role="img" />
+                    </div>
+                    <div>
+                      <img decoding="async" src="/badges/facebook.svg" alt="Las Vegas Personal Injury Law Firm with 5-Star Reviews on Facebook" width="445" height="174" className="form-badge-img" role="img" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
