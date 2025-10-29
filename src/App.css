@@ -631,21 +631,30 @@ body {
   position: relative;
   display: block;
   padding: 0;
-  margin-bottom: 0;
+  margin: 0 -10px;
 }
 
 .results-carousel .slick-track {
   position: relative;
-  display: block;
+  display: flex !important;
+  align-items: stretch;
   opacity: 1;
-  height: 220px;
-  padding-top: 10px;
+  height: auto;
+  padding: 10px 0;
 }
 
 .results-carousel .slick-slide {
-  float: left;
-  display: block;
-  margin: 0 10px;
+  float: none;
+  display: flex !important;
+  height: auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.results-carousel .slick-slide>div {
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 /* Result Card - Clean Professional Style */
@@ -662,7 +671,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .result-card:hover {
