@@ -2843,7 +2843,7 @@ body {
   }
 
   .results-carousel-container {
-    padding: 0 50px;
+    padding: 0 45px;
   }
 
   .result-card {
@@ -2863,15 +2863,16 @@ body {
   .results-carousel .slick-next {
     width: 36px;
     height: 36px;
-    top: 80px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .results-carousel .slick-prev {
-    left: 5px;
+    left: -18px;
   }
 
   .results-carousel .slick-next {
-    right: 5px;
+    right: -18px;
   }
 
   .as-seen-label {
