@@ -565,41 +565,60 @@ body {
 
 /* Results Section - Slick Carousel */
 .results-section {
-  background: linear-gradient(to bottom, #F8F9FA 0%, #FFFFFF 100%);
-  padding: 25px 0 0 0;
+  background: #f8f9fa;
+  padding: 60px 0 70px 0;
   margin-top: 0;
   position: relative;
-  border-top: 1px solid var(--border-gray);
+  border-top: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.results-section::before {
+  content: '$67M+';
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 280px;
+  font-weight: 900;
+  color: rgba(30, 58, 138, 0.03);
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
 
 .results-section-header {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .results-section-title {
-  font-family: 'Crimson Text', serif;
-  font-size: 42px;
+  font-size: 38px;
   font-weight: 700;
-  color: var(--primary-blue);
-  margin-bottom: 8px;
+  color: var(--text-dark);
+  margin-bottom: 12px;
   letter-spacing: -0.5px;
 }
 
 .results-section-subtitle {
-  font-size: 16px;
+  font-size: 17px;
   color: var(--text-light);
   font-weight: 400;
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 /* Slick Carousel Container */
 .results-carousel-container {
   max-width: 1200px;
-  margin: 0 auto 0 auto;
-  padding: 0 80px;
+  margin: 0 auto;
+  padding: 0 70px;
+  position: relative;
+  z-index: 1;
 }
 
 .results-carousel {
@@ -619,6 +638,8 @@ body {
   position: relative;
   display: block;
   opacity: 1;
+  height: 220px;
+  padding-top: 10px;
 }
 
 .results-carousel .slick-slide {
@@ -629,56 +650,66 @@ body {
 
 /* Result Card - Clean Professional Style */
 .result-card {
-  background: white;
+  background: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D1D5DB;
-  padding: 35px 25px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  padding: 40px 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   transition: all 0.2s ease;
   text-align: center;
-  min-height: 180px;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 10px;
 }
 
 .result-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.12);
   border-color: var(--primary-blue);
+  transform: translateY(-4px) scale(1.02);
+  background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
 }
 
 .result-amount {
-  font-family: 'Crimson Text', serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   color: var(--primary-blue);
-  margin: 0 0 12px 0;
-  line-height: 1.1;
+  margin: 0 0 16px 0;
+  line-height: 1;
   text-align: center;
   text-decoration: none;
   display: block;
-  letter-spacing: -0.5px;
+  transition: all 0.3s ease;
 }
 
-.result-amount:hover {
-  color: var(--primary-blue);
+.result-card:hover .result-amount {
+  color: var(--dark-blue);
+  text-shadow: 0 2px 8px rgba(30, 58, 138, 0.15);
 }
 
 /* Divider Line */
 .result-divider {
-  width: 40px;
-  height: 2px;
-  background: var(--border-gray);
-  margin: 0 auto 12px;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-blue);
+  margin: 0 auto 16px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.result-card:hover .result-divider {
+  width: 60px;
+  box-shadow: 0 0 12px rgba(30, 58, 138, 0.4);
 }
 
 .result-case {
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--text-light);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-dark);
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
   text-align: center;
 }
 
@@ -2163,6 +2194,23 @@ body {
   .hero-gallery-inner img {
     height: 80px;
     max-width: 140px;
+  }
+
+  /* Results Section Tablet */
+  .results-section {
+    padding: 50px 0 60px 0;
+  }
+
+  .results-section-header {
+    margin-bottom: 35px;
+  }
+
+  .results-section-title {
+    font-size: 34px;
+  }
+
+  .results-carousel-container {
+    padding: 0 60px;
   }
 
   .why-choose-grid {
