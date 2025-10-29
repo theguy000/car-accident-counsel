@@ -601,7 +601,7 @@ function App() {
               dots={false}
               infinite={true}
               speed={600}
-              slidesToShow={4}
+              slidesToShow={3}
               slidesToScroll={1}
               autoplay={false}
               cssEase="ease-in-out"
@@ -611,7 +611,7 @@ function App() {
                 {
                   breakpoint: 1024,
                   settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
                     rows: 1,
@@ -621,7 +621,7 @@ function App() {
                 {
                   breakpoint: 768,
                   settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
                     rows: 1,
