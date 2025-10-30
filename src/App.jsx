@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Slider from 'react-slick'
+import { Scale, ShieldCheck, Trophy, ClipboardList, Clock, Target, UserCheck, Check } from 'lucide-react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './App.css'
@@ -908,26 +909,48 @@ function App() {
       <section className="why-choose-section">
         <div className="container">
           <div className="why-choose-header">
-            <h2 className="why-choose-title">WHY CHOOSE US</h2>
+            <span className="why-choose-eyebrow">Trusted By Thousands</span>
+            <h2 className="why-choose-title">Why Accident Victims Choose Our Firm</h2>
+            <div className="why-choose-divider">
+              <span className="divider-line"></span>
+              <span className="divider-dot"></span>
+              <span className="divider-line"></span>
+            </div>
             <p className="why-choose-subtitle">
-              When you're injured, you need more than just a lawyer - you need a dedicated advocate who will fight for every dollar you deserve
+              When you're injured, you need more than a lawyer - you need a relentless advocate who understands the stakes, protects your future, and fights for every dollar you deserve.
             </p>
           </div>
 
           <div className="why-choose-mission">
             <div className="mission-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
+              <Scale className="mission-icon-svg" />
             </div>
             <div className="mission-content">
-              <h3>We Fight for the Little Guy</h3>
+              <h3>We Champion Injured Clients From Day One</h3>
               <p>
-                Without experienced injury lawyers to represent victims, powerful businesses, big-name insurance companies,
-                and other influential parties frequently help negligent entities escape liability for their actions - leaving
-                the financial burdens to be shouldered by the little guy. <strong>Innocent victims should never be left to pay.</strong>
-                That's why we're here: to level the playing field and ensure you get the justice and compensation you deserve.
+                Insurance companies move quickly to minimize their exposure. Our team mobilizes immediately - preserving evidence,
+                coordinating medical care, and building a strategy tailored to the full impact of your injuries.
               </p>
+              <ul className="mission-bullets">
+                <li>
+                  <span className="bullet-icon">
+                    <Check className="bullet-icon-svg" />
+                  </span>
+                  <span>Dedicated legal team assigned within 24 hours of your call</span>
+                </li>
+                <li>
+                  <span className="bullet-icon">
+                    <Check className="bullet-icon-svg" />
+                  </span>
+                  <span>Transparent updates and direct access to your attorney throughout your case</span>
+                </li>
+                <li>
+                  <span className="bullet-icon">
+                    <Check className="bullet-icon-svg" />
+                  </span>
+                  <span>Relentless negotiation backed by proven trial experience when insurers refuse to be fair</span>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -935,109 +958,81 @@ function App() {
             <div className="why-choose-card why-choose-featured">
               <div className="featured-badge">ZERO RISK</div>
               <div className="why-choose-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
+                <ShieldCheck className="why-choose-icon-svg" />
               </div>
-              <h3>No Win, No Fee Guarantee</h3>
+              <h3>No-Win, No-Fee Promise</h3>
               <p>
-                Zero upfront costs. Zero risk. We only get paid when you win. If we don't recover compensation for you, you owe us nothing - guaranteed.
+                Zero upfront costs. Zero risk. If we don't secure compensation on your behalf, you owe us nothing - guaranteed.
               </p>
               <div className="card-footer">
-                <span className="footer-highlight">100% Risk-Free</span>
+                <span className="footer-highlight">Only Pay When We Win</span>
               </div>
             </div>
 
             <div className="why-choose-card">
               <div className="why-choose-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
+                <Trophy className="why-choose-icon-svg" />
               </div>
-              <h3>Proven Results</h3>
+              <h3>Results That Matter</h3>
               <p>
-                We've recovered over $67 million for clients. Our aggressive negotiation tactics and courtroom experience mean maximum compensation for you.
+                More than $67 million recovered for injured clients through strategic negotiation and formidable courtroom advocacy.
               </p>
               <div className="card-footer">
-                <span className="footer-highlight">95% Win Rate</span>
+                <span className="footer-highlight">$67M+ Recovered</span>
               </div>
             </div>
 
             <div className="why-choose-card">
               <div className="why-choose-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
+                <ClipboardList className="why-choose-icon-svg" />
               </div>
-              <h3>We Handle Everything</h3>
+              <h3>Full-Service Case Management</h3>
               <p>
-                From medical bills to insurance paperwork, we manage every detail. You focus on healing - we'll handle the legal battle.
+                We coordinate medical treatment, manage complex paperwork, and handle every insurer conversation so you can focus on recovery.
               </p>
               <div className="card-footer">
-                <span className="footer-highlight">Full-Service Support</span>
+                <span className="footer-highlight">Concierge Support</span>
               </div>
             </div>
 
             <div className="why-choose-card">
               <div className="why-choose-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+                <Clock className="why-choose-icon-svg" />
               </div>
-              <h3>Fast Response Time</h3>
+              <h3>Rapid Response Team</h3>
               <p>
-                Available 24/7 with same-day case reviews. The sooner we start, the stronger your case. Call now for immediate assistance.
+                Available 24/7 with same-day case reviews. We move fast to secure evidence, protect your rights, and set the tone for your claim.
               </p>
               <div className="card-footer">
-                <span className="footer-highlight">24/7 Availability</span>
+                <span className="footer-highlight">Same-Day Reviews</span>
               </div>
             </div>
 
             <div className="why-choose-card">
               <div className="why-choose-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
+                <Target className="why-choose-icon-svg" />
               </div>
-              <h3>Specialized Expertise</h3>
+              <h3>Focused Accident Expertise</h3>
               <p>
-                Our attorneys focus exclusively on car accident cases. We know every tactic insurance companies use - and how to beat them.
+                Our practice is dedicated to motor-vehicle injury cases. We anticipate insurer tactics and build evidence that withstands scrutiny.
               </p>
               <div className="card-footer">
-                <span className="footer-highlight">Accident Specialists</span>
+                <span className="footer-highlight">Motor Vehicle Specialists</span>
               </div>
             </div>
 
             <div className="why-choose-card">
               <div className="why-choose-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                </svg>
+                <UserCheck className="why-choose-icon-svg" />
               </div>
-              <h3>Personal Attention</h3>
+              <h3>Personalized Counsel</h3>
               <p>
-                You'll work directly with your attorney - not a paralegal. We keep you informed at every step with regular updates on your case.
+                You work directly with your attorney from intake to resolution, with proactive updates and meetings tailored to your schedule.
               </p>
               <div className="card-footer">
                 <span className="footer-highlight">Direct Attorney Access</span>
               </div>
             </div>
-          </div>
-
-          <div className="why-choose-cta">
-            <div className="cta-content">
-              <h3>Ready to Get the Compensation You Deserve?</h3>
-              <p>Free consultation. No obligations. Let's discuss your case today.</p>
-            </div>
-            <a href="tel:1-866-555-0123" className="cta-button">
-              Call Now: (866) 555-0123
-            </a>
           </div>
         </div>
       </section>
@@ -1316,14 +1311,14 @@ function App() {
       {/* Final CTA */}
       <section className="cta-section">
         <div className="container">
-          <h2>Don't Wait - Get the Help You Deserve Today!</h2>
-          <p>Book your FREE consultation or call us now!</p>
+          <h2>Ready to Get the Compensation You Deserve?</h2>
+          <p>Free consultation. No obligations. Let's discuss your case today.</p>
           <div className="cta-buttons">
             <a href="tel:1-866-555-0123" className="btn-cta-large">
               <svg className="cta-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
-              (866) 555-0123
+              Call Now: (866) 555-0123
             </a>
             <button className="btn-cta-secondary">Free Consultation</button>
           </div>

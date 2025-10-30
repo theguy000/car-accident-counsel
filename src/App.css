@@ -1574,6 +1574,22 @@ body {
 .why-choose-header {
   text-align: center;
   margin-bottom: 50px;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-choose-eyebrow {
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--secondary-blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 999px;
+  margin-bottom: 18px;
 }
 
 .why-choose-badge {
@@ -1594,6 +1610,30 @@ body {
   color: var(--text-dark);
   margin-bottom: 16px;
   line-height: 1.2;
+}
+
+.why-choose-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 22px auto 26px;
+  max-width: 220px;
+}
+
+.why-choose-divider .divider-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(30, 58, 138, 0), rgba(30, 58, 138, 0.45), rgba(30, 58, 138, 0));
+}
+
+.why-choose-divider .divider-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--gold-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.12);
+  flex-shrink: 0;
 }
 
 .why-choose-subtitle {
@@ -1632,7 +1672,7 @@ body {
   width: 36px;
   height: 36px;
   color: #fbbf24;
-  stroke-width: 2;
+  stroke-width: 1.8;
 }
 
 .mission-content h3 {
@@ -1648,6 +1688,50 @@ body {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.95);
   margin: 0;
+}
+
+.mission-content p + .mission-bullets {
+  margin-top: 24px;
+}
+
+.mission-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.mission-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.mission-bullets li span:last-child {
+  flex: 1;
+}
+
+.bullet-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.bullet-icon svg {
+  width: 14px;
+  height: 14px;
+  color: #fbbf24;
+  stroke-width: 3;
 }
 
 .mission-content strong {
@@ -1673,6 +1757,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
 
 .why-choose-card:hover {
@@ -1684,6 +1769,7 @@ body {
 .why-choose-featured {
   border: 2px solid var(--primary-blue);
   box-shadow: 0 4px 12px rgba(30, 58, 138, 0.12);
+  background: linear-gradient(180deg, rgba(96, 165, 250, 0.08) 0%, #ffffff 70%);
 }
 
 .featured-badge {
@@ -1702,19 +1788,25 @@ body {
 .why-choose-icon {
   width: 56px;
   height: 56px;
-  background: var(--primary-blue);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 
 .why-choose-icon svg {
   width: 28px;
   height: 28px;
   color: #ffffff;
-  stroke-width: 2;
+  stroke-width: 1.8;
+}
+
+.why-choose-card:hover .why-choose-icon {
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+  transform: translateY(-2px);
 }
 
 .why-choose-card h3 {
@@ -1737,55 +1829,38 @@ body {
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--primary-blue);
+}
+
+.card-footer::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
+
+.why-choose-card:hover .card-footer::before {
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
 .footer-highlight {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--primary-blue);
-}
-
-.why-choose-cta {
-  background: var(--primary-blue);
-  border-radius: 4px;
-  padding: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 30px;
-}
-
-.cta-content h3 {
-  font-size: 26px;
+  font-size: 12px;
   font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 8px 0;
-}
-
-.cta-content p {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
-}
-
-.cta-button {
-  background: #ffffff;
   color: var(--primary-blue);
-  font-size: 18px;
-  font-weight: 700;
-  padding: 16px 32px;
-  border-radius: 4px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
 }
 
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.why-choose-card:hover .footer-highlight {
+  color: var(--dark-blue);
 }
 
 /* Practice Areas Section */
@@ -2459,16 +2534,6 @@ body {
     font-size: 15px;
   }
 
-  .why-choose-cta {
-    flex-direction: column;
-    text-align: center;
-    padding: 32px;
-  }
-
-  .cta-button {
-    width: 100%;
-  }
-
   .trust-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -2781,23 +2846,6 @@ body {
 
   .why-choose-subtitle {
     font-size: 16px;
-  }
-
-  .why-choose-cta {
-    padding: 24px 20px;
-  }
-
-  .cta-content h3 {
-    font-size: 22px;
-  }
-
-  .cta-content p {
-    font-size: 14px;
-  }
-
-  .cta-button {
-    font-size: 16px;
-    padding: 14px 24px;
   }
 
   .why-choose-mission {
