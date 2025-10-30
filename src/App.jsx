@@ -1043,77 +1043,271 @@ function App() {
         </div>
       </section>
 
-      {/* Process Steps - Vertical Interactive Timeline */}
-      <section className="process-section">
+      {/* Personal Injury Practice Areas */}
+      <section className="practice-areas-section">
         <div className="container">
-          <h2 className="section-title">Our Simple 3-Step Process</h2>
-          <div className="timeline-container">
-            <div className="timeline-line"></div>
-
-            {/* Step 1 - Left Side */}
-            <div className="timeline-item timeline-left timeline-first">
-              <div className="timeline-content">
-                <h3>Free Consultation</h3>
-                <p>
-                  Contact us for a free, no-obligation consultation. We'll review your case
-                  and explain your legal options in plain language.
+          <div className="practice-areas-header">
+            <h2 className="practice-areas-main-title">
+              <span className="title-accent">Personal Injury</span>
+              <span className="title-main">Practice Areas</span>
+            </h2>
+            <div className="practice-areas-divider">
+              <div className="divider-line"></div>
+              <div className="divider-dot"></div>
+              <div className="divider-line"></div>
+            </div>
+            <p className="practice-areas-subtitle">
+              We represent victims injured in serious accidents. Whether you were rear-ended in traffic, hit by a distracted driver, or injured in a rideshare or trucking collision, our team of experienced injury lawyers is here to help.
+            </p>
+          </div>
+          <div className="practice-areas-grid">
+            {/* Car Accidents */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Car-Accidents.jpg" 
+                  alt="Car Accident Scene" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">CAR ACCIDENTS</h3>
+                <p className="practice-area-description">
+                  When you've been injured in a vehicle accident, we're here to fight for you. 
+                  Our experienced car accident attorneys handle insurance negotiations and pursue 
+                  maximum compensation for your injuries, lost wages, and damages.
                 </p>
-                <button className="btn-cta">Get Started</button>
-              </div>
-              <div className="timeline-marker">
-                <div className="marker-dot">1</div>
-              </div>
-              <div className="timeline-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                  <line x1="9" y1="10" x2="15" y2="10"></line>
-                  <line x1="9" y1="14" x2="15" y2="14"></line>
-                </svg>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
               </div>
             </div>
 
-            {/* Step 2 - Right Side */}
-            <div className="timeline-item timeline-right">
-              <div className="timeline-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
+            {/* Motorcycle Accidents */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Motorcycle-Accidents.jpg" 
+                  alt="Motorcycle Accident Scene" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
               </div>
-              <div className="timeline-marker">
-                <div className="marker-dot">2</div>
-              </div>
-              <div className="timeline-content">
-                <h3>Case Evaluation</h3>
-                <p>
-                  Our legal team will thoroughly investigate your accident, gather evidence,
-                  and build a strong case on your behalf.
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">MOTORCYCLE ACCIDENTS</h3>
+                <p className="practice-area-description">
+                  Motorcycle riders face unique risks on the road. Our motorcycle accident 
+                  lawyers understand the complexities of these cases and fight to secure 
+                  fair compensation for your injuries and recovery.
                 </p>
-                <button className="btn-cta">Get Started</button>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
               </div>
             </div>
 
-            {/* Step 3 - Left Side */}
-            <div className="timeline-item timeline-left timeline-last">
-              <div className="timeline-content">
-                <h3>Get Compensated</h3>
-                <p>
-                  We negotiate aggressively with insurance companies or take your case to court
-                  to secure the maximum compensation you deserve.
+            {/* Truck Accidents */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Truck-Accidents.jpg" 
+                  alt="Truck Accident Scene" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">TRUCK ACCIDENTS</h3>
+                <p className="practice-area-description">
+                  Commercial truck accidents often result in severe injuries. Our truck accident 
+                  attorneys have the expertise to handle complex liability issues and pursue 
+                  full compensation for your recovery.
                 </p>
-                <button className="btn-cta">Get Started</button>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
               </div>
-              <div className="timeline-marker">
-                <div className="marker-dot">3</div>
+            </div>
+
+            {/* Pedestrian Accidents */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Pedestrian-Accidents.jpg" 
+                  alt="Pedestrian Accident Scene" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
               </div>
-              <div className="timeline-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="12" y1="1" x2="12" y2="23"></line>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                </svg>
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">PEDESTRIAN ACCIDENTS</h3>
+                <p className="practice-area-description">
+                  Pedestrians are highly vulnerable in road accidents, often suffering serious 
+                  injuries. Our pedestrian accident lawyers fight to recover medical costs, 
+                  lost wages, and damages for victims hit by negligent drivers.
+                </p>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Bicycle Accidents */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Bicycle-Accidents.jpg" 
+                  alt="Bicycle Accident Scene" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">BICYCLE ACCIDENTS</h3>
+                <p className="practice-area-description">
+                  A bicycle accident can lead to devastating injuries and long recoveries. Our 
+                  skilled bike accident attorneys handle insurance companies and negligent drivers 
+                  to secure maximum compensation for your injuries.
+                </p>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Bus Accidents */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Bus-Accidents.jpg" 
+                  alt="Bus Accident Scene" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">BUS ACCIDENTS</h3>
+                <p className="practice-area-description">
+                  Injured in a bus accident? These cases involve complex liability issues and 
+                  powerful companies. Our experienced bus accident lawyers help victims claim 
+                  fair compensation for medical bills, lost income, and suffering.
+                </p>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Slip and Fall Injuries */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Slip-and-Fall-Injuries-.jpg" 
+                  alt="Slip and Fall Accident" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">SLIP AND FALL INJURIES</h3>
+                <p className="practice-area-description">
+                  A slip and fall accident can cause broken bones, head trauma, and lasting pain. 
+                  Our skilled premises liability lawyers hold negligent property owners accountable 
+                  and fight for your right to fair compensation.
+                </p>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Uber and Lyft Accidents */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Uber-and-Lyft-Accidents-.jpg" 
+                  alt="Uber and Lyft Accident Scene" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">UBER AND LYFT ACCIDENTS</h3>
+                <p className="practice-area-description">
+                  Rideshare crashes often involve complex insurance disputes. Our experienced Uber 
+                  and Lyft accident attorneys know how to handle these claims and ensure victims 
+                  get maximum compensation. We stand by you against big insurers.
+                </p>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Dog Bite Injuries */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Dog-Bite-Injuries.jpg" 
+                  alt="Dog Bite Injury" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">DOG BITE INJURIES</h3>
+                <p className="practice-area-description">
+                  Dog attacks can leave victims with serious injuries, scarring, and emotional trauma. 
+                  Our dedicated dog bite lawyers pursue justice and compensation for medical bills, 
+                  lost wages, and suffering. We protect your rights every step of the way.
+                </p>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Wrongful Death Claims */}
+            <div className="practice-area-card">
+              <div className="practice-area-image-wrapper">
+                <img 
+                  src="/practice-areas/Wrongful-Death-Claims-.jpg" 
+                  alt="Wrongful Death Claim" 
+                  className="practice-area-image"
+                  loading="lazy"
+                />
+              </div>
+              <div className="practice-area-content">
+                <h3 className="practice-area-title">WRONGFUL DEATH CLAIMS</h3>
+                <p className="practice-area-description">
+                  Losing a loved one due to negligence is devastating. Our experienced wrongful death 
+                  attorneys help families pursue justice and secure compensation for funeral costs, 
+                  lost income, and emotional suffering. We stand by you in this difficult time.
+                </p>
+                <div className="practice-area-arrow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
