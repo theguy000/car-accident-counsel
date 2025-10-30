@@ -1448,6 +1448,15 @@ body {
   padding: 0 60px;
 }
 
+.trust-testimonial-slider .slick-list {
+  margin: 0 -15px;
+}
+
+.trust-testimonial-slider .slick-slide {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
 .trust-testimonial-slider .slick-arrow {
   position: absolute;
   top: 50%;
@@ -1504,7 +1513,8 @@ body {
   border-radius: 4px;
   text-align: center;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  margin: 0 10px;
+  margin: 0;
+  width: 100%;
 }
 
 .testimonial-stars {
@@ -2476,6 +2486,14 @@ body {
     padding: 0 50px;
   }
 
+  .trust-testimonial-slider .slick-list {
+    margin: 0 -12px;
+  }
+
+  .trust-testimonial-slider .slick-slide {
+    padding: 0 12px;
+  }
+
   .trust-testimonial-slider .slick-arrow {
     width: 44px;
     height: 44px;
@@ -2879,6 +2897,18 @@ body {
 
   .trust-testimonial-slider .slick-slider {
     padding: 0 40px;
+  }
+
+  .trust-testimonial-slider .slick-list {
+    margin: 0 -10px;
+  }
+
+  .trust-testimonial-slider .slick-slide {
+    padding: 0 10px;
+  }
+
+  .trust-testimonial {
+    padding: 32px 30px;
   }
 
   .trust-testimonial-slider .slick-arrow {

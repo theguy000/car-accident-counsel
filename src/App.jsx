@@ -908,8 +908,7 @@ function App() {
       <section className="why-choose-section">
         <div className="container">
           <div className="why-choose-header">
-            <div className="why-choose-badge">TRUSTED BY THOUSANDS</div>
-            <h2 className="why-choose-title">Why Accident Victims Choose Us</h2>
+            <h2 className="why-choose-title">WHY CHOOSE US</h2>
             <p className="why-choose-subtitle">
               When you're injured, you need more than just a lawyer - you need a dedicated advocate who will fight for every dollar you deserve
             </p>
