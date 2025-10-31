@@ -247,7 +247,7 @@ function App() {
               </h2>
 
               <p className="hero-subtitle">
-                Free consultation. No fees unless we win. Maximum compensation guaranteed.
+                <span className="hero-free-highlight">Free</span> consultation. No fees unless we win. Maximum compensation guaranteed.
               </p>
 
               {/* CTA Phone Button */}
