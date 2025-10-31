@@ -2094,16 +2094,32 @@ body {
 
 /* Practice Areas Section */
 .practice-areas-section {
-  background: var(--light-gray);
-  padding: 80px 0;
+  background: #ffffff;
+  padding: 80px 0 90px 0;
+  margin-top: 0;
+  position: relative;
+  border-top: 3px solid var(--dark-gold);
   overflow: hidden;
+}
+
+.practice-areas-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0) 0%, rgba(212, 175, 55, 0) 50%, rgba(212, 175, 55, 0.03) 75%, rgba(212, 175, 55, 0.05) 100%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .practice-areas-header {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   padding: 0 20px;
   position: relative;
+  z-index: 1;
 }
 
 .practice-areas-header-badge {
@@ -2125,13 +2141,11 @@ body {
   font-size: 48px;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 24px;
-  letter-spacing: -1px;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
   line-height: 1.2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  position: relative;
+  display: block;
 }
 
 .practice-areas-main-title .title-accent {
@@ -2173,19 +2187,23 @@ body {
 }
 
 .practice-areas-subtitle {
+  font-family: var(--font-body);
   font-size: 18px;
   color: var(--text-light);
-  line-height: 1.7;
-  max-width: 750px;
-  margin: 0 auto;
   font-weight: 400;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
 }
 
 .practice-areas-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-top: 40px;
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .practice-area-card {
@@ -2193,16 +2211,18 @@ body {
   border-radius: 0;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: row;
   cursor: pointer;
   align-items: flex-start;
+  position: relative;
 }
 
 .practice-area-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-color: rgba(184, 134, 11, 0.2);
 }
 
 .practice-area-image-wrapper {
@@ -2217,6 +2237,10 @@ body {
   align-items: stretch;
 }
 
+.practice-area-image-wrapper::after {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .practice-area-image-wrapper {
     width: 30%;
@@ -2229,16 +2253,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
   display: block;
 }
 
-.practice-area-card:hover .practice-area-image {
-  transform: scale(1.02);
-}
-
 .practice-area-content {
-  padding: 24px 28px;
+  padding: 28px 32px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -2249,15 +2268,36 @@ body {
   min-height: 100%;
 }
 
+.practice-area-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--dark-gold);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.practice-area-card:hover .practice-area-content::before {
+  width: 100%;
+}
+
 .practice-area-title {
   font-family: var(--font-body);
-  font-size: 17px;
-  font-weight: 600;
-  color: #B8860B;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 14px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.practice-area-card:hover .practice-area-title {
+  color: var(--dark-gold);
 }
 
 .practice-area-description {
@@ -2270,24 +2310,28 @@ body {
 
 .practice-area-arrow {
   position: absolute;
-  bottom: 24px;
-  right: 28px;
-  width: 28px;
-  height: 28px;
-  color: #B8860B;
-  transition: all 0.3s ease;
+  bottom: 28px;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+  color: var(--primary-blue);
+  background: rgba(30, 58, 138, 0.05);
+  transition: background 0.2s ease, color 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
 }
 
 .practice-area-card:hover .practice-area-arrow {
-  transform: translateX(5px);
+  color: var(--white);
+  background: var(--dark-gold);
 }
 
 .practice-area-arrow svg {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5;
 }
 
 .timeline-container {

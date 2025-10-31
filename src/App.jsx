@@ -932,15 +932,7 @@ function App() {
       <section className="practice-areas-section">
         <div className="container">
           <div className="practice-areas-header">
-            <h2 className="practice-areas-main-title">
-              <span className="title-accent">Personal Injury</span>
-              <span className="title-main">Practice Areas</span>
-            </h2>
-            <div className="practice-areas-divider">
-              <div className="divider-line"></div>
-              <div className="divider-dot"></div>
-              <div className="divider-line"></div>
-            </div>
+            <h2 className="practice-areas-main-title">Personal Injury Practice Areas</h2>
             <p className="practice-areas-subtitle">
               We represent victims injured in serious accidents. Whether you were rear-ended in traffic, hit by a distracted driver, or injured in a rideshare or trucking collision, our team of experienced injury lawyers is here to help.
             </p>
