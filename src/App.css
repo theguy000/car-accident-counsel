@@ -19,6 +19,14 @@
   --white: #FFFFFF;
   --light-gray: #F5F5F5;
   --border-gray: #E0E0E0;
+  
+  /* Typography System */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  /* Elegant serif for main headings and amounts */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  /* Clean sans-serif for body text */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  /* UI elements and buttons */
 }
 
 * {
@@ -28,13 +36,12 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-dark);
   line-height: 1.6;
+  font-weight: 400;
 }
 
 .app {
@@ -141,7 +148,7 @@ body {
   overflow: hidden;
 }
 
-/* Hero Gallery */
+/* Hero Gallery - Clean Static Design */
 .hero-gallery {
   padding-bottom: 30px;
   position: relative;
@@ -152,28 +159,29 @@ body {
 
 .hero-gallery-inner {
   display: flex;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
   justify-content: center;
   width: 100%;
   padding-top: 20px;
+  flex-wrap: nowrap;
 }
 
 .hero-gallery-inner span {
-  padding: 10px;
+  padding: 12px 16px;
   background: transparent;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
   width: auto;
+  opacity: 0.9;
 }
 
 .hero-gallery-inner span:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-3px);
+  background: transparent;
+  transform: none;
 }
 
 .hero-gallery-inner img {
@@ -182,12 +190,13 @@ body {
   max-width: 180px;
   object-fit: contain;
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-  transition: all 0.3s ease;
+  opacity: 0.95;
 }
 
 .hero-gallery-inner span:hover img {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(110%) contrast(100%);
-  transform: scale(1.05);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+  transform: none;
+  opacity: 0.95;
 }
 
 .hero::before {
@@ -382,12 +391,14 @@ body {
 }
 
 .hero-title {
+  font-family: var(--font-heading);
   font-size: 64px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 25px;
   animation: fadeInUp 0.8s ease-out 0.1s backwards;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.5px;
 }
 
 /* Hero Statistics */
@@ -598,20 +609,24 @@ body {
 }
 
 .results-section-title {
-  font-size: 38px;
+  font-family: var(--font-heading);
+  font-size: 42px;
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 12px;
   letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .results-section-subtitle {
+  font-family: var(--font-body);
   font-size: 17px;
   color: var(--text-light);
   font-weight: 400;
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.6;
+  letter-spacing: 0.1px;
 }
 
 /* Slick Carousel Container */
@@ -685,13 +700,13 @@ body {
 }
 
 .result-amount {
-  font-size: 38px;
+  font-family: var(--font-heading);
+  font-size: 42px;
   font-weight: 700;
   color: var(--dark-gold);
   margin: 0 0 12px 0;
   line-height: 1.1;
   text-align: center;
-  font-family: 'Playfair Display', Georgia, serif;
   letter-spacing: -0.5px;
 }
 
@@ -701,12 +716,14 @@ body {
 }
 
 .result-case {
-  font-size: 15px;
+  font-family: var(--font-body);
+  font-size: 16px;
   font-weight: 400;
   color: #6c757d;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: center;
+  letter-spacing: 0.2px;
 }
 
 /* Slick Navigation Buttons - Slim and Sleek */
@@ -921,6 +938,7 @@ body {
 }
 
 .qualification-form h3 {
+  font-family: var(--font-body);
   font-size: 24px;
   margin-bottom: 8px;
   color: var(--text-dark);
@@ -1370,10 +1388,13 @@ body {
 }
 
 .trust-header h2 {
-  font-size: 38px;
+  font-family: var(--font-heading);
+  font-size: 42px;
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .trust-header p {
@@ -1413,6 +1434,7 @@ body {
 }
 
 .trust-item h3 {
+  font-family: var(--font-body);
   font-size: 18px;
   font-weight: 600;
   color: var(--text-dark);
@@ -1595,11 +1617,13 @@ body {
 }
 
 .why-choose-title {
+  font-family: var(--font-heading);
   font-size: 44px;
   font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 16px;
   line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .why-choose-divider {
@@ -1666,6 +1690,7 @@ body {
 }
 
 .mission-content h3 {
+  font-family: var(--font-body);
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
@@ -1800,6 +1825,7 @@ body {
 }
 
 .why-choose-card h3 {
+  font-family: var(--font-body);
   font-size: 20px;
   font-weight: 600;
   color: var(--text-dark);
@@ -1882,6 +1908,7 @@ body {
 }
 
 .practice-areas-main-title {
+  font-family: var(--font-heading);
   font-size: 48px;
   font-weight: 700;
   color: var(--text-dark);
@@ -2010,11 +2037,12 @@ body {
 }
 
 .practice-area-title {
-  font-size: 19px;
-  font-weight: 700;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 600;
   color: #B8860B;
   margin-bottom: 12px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   line-height: 1.3;
 }
@@ -2323,8 +2351,12 @@ body {
 }
 
 .cta-section h2 {
+  font-family: var(--font-heading);
   font-size: 42px;
+  font-weight: 700;
   margin-bottom: 15px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .cta-section p {
