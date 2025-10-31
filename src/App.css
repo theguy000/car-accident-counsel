@@ -729,6 +729,7 @@ body {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   position: relative;
+  overflow: hidden;
 }
 
 .result-card:hover {
@@ -751,7 +752,7 @@ body {
   line-height: 1.1;
   text-align: center;
   letter-spacing: -0.5px;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .result-card:hover .result-amount {
@@ -767,6 +768,101 @@ body {
   line-height: 1.6;
   text-align: center;
   letter-spacing: 0.2px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.result-card:hover .result-amount,
+.result-card:hover .result-case {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.result-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+  padding: 35px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(184, 134, 11, 0.1);
+}
+
+.result-card:hover .result-details {
+  opacity: 1;
+  visibility: visible;
+}
+
+.result-description {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 1.8;
+  text-align: center;
+  letter-spacing: 0.2px;
+  margin: 0;
+  max-width: 100%;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  font-style: italic;
+}
+
+.result-card:hover .result-description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.result-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.result-card:hover .result-bullets {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.result-bullets li {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: left;
+  line-height: 1.7;
+  padding-left: 24px;
+  position: relative;
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.result-bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--dark-gold);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  top: -1px;
 }
 
 /* Slick Navigation Buttons - Slim and Sleek */

@@ -645,37 +645,85 @@ function App() {
               <div>
                 <div className="result-card">
                   <div className="result-amount">$990,000</div>
-                  <p className="result-case">Semi-Truck Collision</p>
+                  <p className="result-case">Commercial Truck Accident</p>
+                  <div className="result-details">
+                    <ul className="result-bullets">
+                      <li>Spinal cord injury</li>
+                      <li>Permanent disability</li>
+                      <li>Loss of income</li>
+                      <li>Future medical care</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div>
                 <div className="result-card">
                   <div className="result-amount">$650,000</div>
-                  <p className="result-case">Motor Vehicle Accident</p>
+                  <p className="result-case">Rear-End Collision</p>
+                  <div className="result-details">
+                    <ul className="result-bullets">
+                      <li>Traumatic brain injury</li>
+                      <li>Extensive rehabilitation</li>
+                      <li>Lost wages</li>
+                      <li>Pain and suffering</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div>
                 <div className="result-card">
                   <div className="result-amount">$500,000</div>
-                  <p className="result-case">Car Accident Settlement</p>
+                  <p className="result-case">Intersection Collision</p>
+                  <div className="result-details">
+                    <ul className="result-bullets">
+                      <li>Multiple fractures</li>
+                      <li>Surgical interventions</li>
+                      <li>Property damage</li>
+                      <li>Long-term therapy</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div>
                 <div className="result-card">
                   <div className="result-amount">$30 Million</div>
-                  <p className="result-case">Premise Liability Settlement</p>
+                  <p className="result-case">Premise Liability</p>
+                  <div className="result-details">
+                    <ul className="result-bullets">
+                      <li>Catastrophic injuries</li>
+                      <li>Property owner negligence</li>
+                      <li>Lifetime care required</li>
+                      <li>Loss of quality of life</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div>
                 <div className="result-card">
                   <div className="result-amount">$20 Million</div>
-                  <p className="result-case">Slip & Fall Verdict</p>
+                  <p className="result-case">Slip & Fall</p>
+                  <div className="result-details">
+                    <ul className="result-bullets">
+                      <li>Severe head trauma</li>
+                      <li>Unsafe premises</li>
+                      <li>Permanent impairment</li>
+                      <li>Jury verdict</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div>
                 <div className="result-card">
                   <div className="result-amount">$14.1 Million</div>
                   <p className="result-case">Commercial Vehicle Collision</p>
+                  <div className="result-details">
+                    <ul className="result-bullets">
+                      <li>Multi-vehicle accident</li>
+                      <li>Critical injuries</li>
+                      <li>Extended hospital stay</li>
+                      <li>Ongoing medical needs</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </Slider>
