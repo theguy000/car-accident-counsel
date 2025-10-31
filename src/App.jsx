@@ -237,7 +237,9 @@ function App() {
                 <span className="trust-badge-inline">$67M+ Recovered</span>
               </div>
 
-              <h2 className="hero-title">Award-Winning Car Accident Attorneys Fighting for Your Rights</h2>
+              <h2 className="hero-title">
+                <span className="hero-title-accent">Award-Winning</span> Car Accident Attorneys Fighting for Your Rights
+              </h2>
 
               <p className="hero-subtitle">
                 Free consultation. No fees unless we win. Maximum compensation guaranteed.
