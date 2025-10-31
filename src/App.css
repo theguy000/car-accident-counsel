@@ -59,16 +59,18 @@ body {
 
 /* Header */
 .header {
-  background: var(--white);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
   background-image: url('/top-flag.png');
   background-repeat: no-repeat;
   background-position: top left;
   background-size: auto 100%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
   padding: 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(30, 58, 138, 0.08);
+  backdrop-filter: blur(10px);
 }
 
 .header-content {
@@ -82,6 +84,11 @@ body {
   display: flex;
   align-items: center;
   padding: 20px 0;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.85;
 }
 
 .logo-img {
@@ -113,21 +120,40 @@ body {
   gap: 4px;
   text-decoration: none;
   color: var(--white);
-  background: var(--primary-blue);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
   padding: 0 24px;
   border-radius: 0;
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.2);
+}
+
+.phone-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .phone-link:hover {
-  background: var(--dark-blue);
+  background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+  transform: translateY(-1px);
+}
+
+.phone-link:hover::before {
+  opacity: 1;
 }
 
 .phone-number {
   font-size: 18px;
   font-weight: 700;
-  color: var(--white);
+  color: var(--dark-gold);
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .phone-cta {
@@ -135,6 +161,9 @@ body {
   font-weight: 600;
   color: var(--white);
   letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+  opacity: 0.95;
 }
 
 /* Hero Section */
@@ -205,8 +234,20 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.92) 0%, rgba(37, 99, 235, 0.92) 100%);
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(37, 99, 235, 0.25) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(30, 58, 138, 0.3) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(30, 58, 138, 0.88) 0%, rgba(37, 99, 235, 0.85) 50%, rgba(30, 58, 138, 0.9) 100%);
   z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.15) 100%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Animated Background Particles */
