@@ -238,7 +238,12 @@ function App() {
               </div>
 
               <h2 className="hero-title">
-                <span className="hero-title-accent">Award-Winning</span> Car Accident Attorneys Fighting for Your Rights
+                <div className="hero-title-line">
+                  <span className="hero-title-accent">Award-Winning</span>
+                </div>
+                <div className="hero-title-line">
+                  Accident Attorneys Fighting for Your Rights
+                </div>
               </h2>
 
               <p className="hero-subtitle">
