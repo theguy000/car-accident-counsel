@@ -12,6 +12,8 @@
   /* Light Accent Blue */
   --gold-accent: #F59E0B;
   /* Gold for CTAs */
+  --dark-gold: #B8860B;
+  /* Dark Goldenrod - Elegant Golden */
   --text-dark: #2C2C2C;
   --text-light: #666666;
   --white: #FFFFFF;
@@ -657,100 +659,87 @@ body {
   display: flex;
 }
 
-/* Result Card - Clean Professional Style */
+/* Result Card - Minimal Style Matching Image */
 .result-card {
-  background: #ffffff;
-  border-radius: 4px;
-  border: 1px solid #e5e7eb;
-  padding: 40px 30px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
+  background: #f8f9fa;
+  border: 2px solid var(--dark-gold);
+  border-radius: 0;
+  padding: 50px 30px;
   text-align: center;
-  min-height: 160px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  transition: none;
+  box-shadow: none;
 }
 
 .result-card:hover {
-  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.12);
-  border-color: var(--primary-blue);
-  transform: translateY(-4px) scale(1.02);
-  background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+  background: #f8f9fa;
+  border: 2px solid var(--dark-gold);
+  box-shadow: none;
+  transform: none;
 }
 
 .result-amount {
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
-  color: var(--primary-blue);
-  margin: 0 0 16px 0;
-  line-height: 1;
+  color: var(--dark-gold);
+  margin: 0 0 12px 0;
+  line-height: 1.1;
   text-align: center;
-  text-decoration: none;
-  display: block;
-  transition: all 0.3s ease;
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.5px;
 }
 
 .result-card:hover .result-amount {
-  color: var(--dark-blue);
-  text-shadow: 0 2px 8px rgba(30, 58, 138, 0.15);
-}
-
-/* Divider Line */
-.result-divider {
-  width: 50px;
-  height: 3px;
-  background: var(--primary-blue);
-  margin: 0 auto 16px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.result-card:hover .result-divider {
-  width: 60px;
-  box-shadow: 0 0 12px rgba(30, 58, 138, 0.4);
+  color: var(--dark-gold);
+  text-shadow: none;
 }
 
 .result-case {
   font-size: 15px;
-  font-weight: 500;
-  color: var(--text-dark);
+  font-weight: 400;
+  color: #6c757d;
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
   text-align: center;
 }
 
-/* Slick Navigation Buttons */
+/* Slick Navigation Buttons - Slim and Sleek */
 .results-carousel .slick-prev,
 .results-carousel .slick-next {
   position: absolute;
-  top: 90px;
-  width: 50px;
-  height: 50px;
-  background: var(--primary-blue);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 80px;
+  background: var(--dark-gold);
   border: none;
-  border-radius: 4px;
+  border-radius: 0;
   cursor: pointer;
   z-index: 10;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  box-shadow: none;
+  opacity: 0.9;
 }
 
 .results-carousel .slick-prev:hover,
 .results-carousel .slick-next:hover {
-  background: var(--dark-blue);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: var(--dark-gold);
+  box-shadow: none;
+  opacity: 1;
 }
 
 .results-carousel .slick-prev {
-  left: -70px;
+  left: -35px;
 }
 
 .results-carousel .slick-next {
-  right: -70px;
+  right: -35px;
 }
 
 .results-carousel .slick-prev:before,
@@ -760,10 +749,10 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid white;
-  border-right: 3px solid white;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
 }
 
 .results-carousel .slick-prev:before {
@@ -780,8 +769,9 @@ body {
 }
 
 .results-carousel .slick-disabled:hover {
-  background: var(--primary-blue);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: var(--dark-gold);
+  box-shadow: none;
+  opacity: 0.3;
 }
 
 /* Smooth transitions */

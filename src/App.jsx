@@ -643,65 +643,38 @@ function App() {
             >
               <div>
                 <div className="result-card">
-                  <div className="result-amount">$30 Million</div>
-                  <div className="result-divider"></div>
-                  <p className="result-case">Premise Liability Settlement</p>
-                </div>
-              </div>
-              <div>
-                <div className="result-card">
-                  <div className="result-amount">$20 Million</div>
-                  <div className="result-divider"></div>
-                  <p className="result-case">Slip & Fall Verdict</p>
-                </div>
-              </div>
-              <div>
-                <div className="result-card">
-                  <div className="result-amount">$14.1 Million</div>
-                  <div className="result-divider"></div>
-                  <p className="result-case">Commercial Vehicle Collision</p>
-                </div>
-              </div>
-              <div>
-                <div className="result-card">
-                  <div className="result-amount">$4.25 Million</div>
-                  <div className="result-divider"></div>
-                  <p className="result-case">Multi-Vehicle Accident</p>
-                </div>
-              </div>
-              <div>
-                <div className="result-card">
-                  <div className="result-amount">$3 Million</div>
-                  <div className="result-divider"></div>
-                  <p className="result-case">Rear-End Collision</p>
-                </div>
-              </div>
-              <div>
-                <div className="result-card">
-                  <div className="result-amount">$2.5 Million</div>
-                  <div className="result-divider"></div>
-                  <p className="result-case">Motorcycle Accident</p>
-                </div>
-              </div>
-              <div>
-                <div className="result-card">
                   <div className="result-amount">$990,000</div>
-                  <div className="result-divider"></div>
                   <p className="result-case">Semi-Truck Collision</p>
                 </div>
               </div>
               <div>
                 <div className="result-card">
                   <div className="result-amount">$650,000</div>
-                  <div className="result-divider"></div>
                   <p className="result-case">Motor Vehicle Accident</p>
                 </div>
               </div>
               <div>
                 <div className="result-card">
                   <div className="result-amount">$500,000</div>
-                  <div className="result-divider"></div>
                   <p className="result-case">Car Accident Settlement</p>
+                </div>
+              </div>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$30 Million</div>
+                  <p className="result-case">Premise Liability Settlement</p>
+                </div>
+              </div>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$20 Million</div>
+                  <p className="result-case">Slip & Fall Verdict</p>
+                </div>
+              </div>
+              <div>
+                <div className="result-card">
+                  <div className="result-amount">$14.1 Million</div>
+                  <p className="result-case">Commercial Vehicle Collision</p>
                 </div>
               </div>
             </Slider>
