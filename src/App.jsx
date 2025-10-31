@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Slider from 'react-slick'
-import { Scale, ShieldCheck, Trophy, ClipboardList, Clock, Target, UserCheck, Check } from 'lucide-react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './App.css'
@@ -878,137 +877,6 @@ function App() {
         </div>
       </section>
 
-      {/* Why Choose Section */}
-      <section className="why-choose-section">
-        <div className="container">
-          <div className="why-choose-header">
-            <span className="why-choose-eyebrow">Trusted By Thousands</span>
-            <h2 className="why-choose-title">Why Accident Victims Choose Our Firm</h2>
-            <div className="why-choose-divider">
-              <span className="divider-line"></span>
-              <span className="divider-dot"></span>
-              <span className="divider-line"></span>
-            </div>
-            <p className="why-choose-subtitle">
-              When you're injured, you need more than a lawyer - you need a relentless advocate who understands the stakes, protects your future, and fights for every dollar you deserve.
-            </p>
-          </div>
-
-          <div className="why-choose-mission">
-            <div className="mission-icon">
-              <Scale className="mission-icon-svg" />
-            </div>
-            <div className="mission-content">
-              <h3>We Champion Injured Clients From Day One</h3>
-              <p>
-                Insurance companies move quickly to minimize their exposure. Our team mobilizes immediately - preserving evidence,
-                coordinating medical care, and building a strategy tailored to the full impact of your injuries.
-              </p>
-              <ul className="mission-bullets">
-                <li>
-                  <span className="bullet-icon">
-                    <Check className="bullet-icon-svg" />
-                  </span>
-                  <span>Dedicated legal team assigned within 24 hours of your call</span>
-                </li>
-                <li>
-                  <span className="bullet-icon">
-                    <Check className="bullet-icon-svg" />
-                  </span>
-                  <span>Transparent updates and direct access to your attorney throughout your case</span>
-                </li>
-                <li>
-                  <span className="bullet-icon">
-                    <Check className="bullet-icon-svg" />
-                  </span>
-                  <span>Relentless negotiation backed by proven trial experience when insurers refuse to be fair</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="why-choose-grid">
-            <div className="why-choose-card why-choose-featured">
-              <div className="featured-badge">ZERO RISK</div>
-              <div className="why-choose-icon">
-                <ShieldCheck className="why-choose-icon-svg" />
-              </div>
-              <h3>No-Win, No-Fee Promise</h3>
-              <p>
-                Zero upfront costs. Zero risk. If we don't secure compensation on your behalf, you owe us nothing - guaranteed.
-              </p>
-              <div className="card-footer">
-                <span className="footer-highlight">Only Pay When We Win</span>
-              </div>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Trophy className="why-choose-icon-svg" />
-              </div>
-              <h3>Results That Matter</h3>
-              <p>
-                More than $67 million recovered for injured clients through strategic negotiation and formidable courtroom advocacy.
-              </p>
-              <div className="card-footer">
-                <span className="footer-highlight">$67M+ Recovered</span>
-              </div>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <ClipboardList className="why-choose-icon-svg" />
-              </div>
-              <h3>Full-Service Case Management</h3>
-              <p>
-                We coordinate medical treatment, manage complex paperwork, and handle every insurer conversation so you can focus on recovery.
-              </p>
-              <div className="card-footer">
-                <span className="footer-highlight">Concierge Support</span>
-              </div>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Clock className="why-choose-icon-svg" />
-              </div>
-              <h3>Rapid Response Team</h3>
-              <p>
-                Available 24/7 with same-day case reviews. We move fast to secure evidence, protect your rights, and set the tone for your claim.
-              </p>
-              <div className="card-footer">
-                <span className="footer-highlight">Same-Day Reviews</span>
-              </div>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <Target className="why-choose-icon-svg" />
-              </div>
-              <h3>Focused Accident Expertise</h3>
-              <p>
-                Our practice is dedicated to motor-vehicle injury cases. We anticipate insurer tactics and build evidence that withstands scrutiny.
-              </p>
-              <div className="card-footer">
-                <span className="footer-highlight">Motor Vehicle Specialists</span>
-              </div>
-            </div>
-
-            <div className="why-choose-card">
-              <div className="why-choose-icon">
-                <UserCheck className="why-choose-icon-svg" />
-              </div>
-              <h3>Personalized Counsel</h3>
-              <p>
-                You work directly with your attorney from intake to resolution, with proactive updates and meetings tailored to your schedule.
-              </p>
-              <div className="card-footer">
-                <span className="footer-highlight">Direct Attorney Access</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Personal Injury Practice Areas */}
       <section className="practice-areas-section">
@@ -1284,16 +1152,44 @@ function App() {
       {/* Final CTA */}
       <section className="cta-section">
         <div className="container">
-          <h2>Ready to Get the Compensation You Deserve?</h2>
-          <p>Free consultation. No obligations. Let's discuss your case today.</p>
-          <div className="cta-buttons">
-            <a href="tel:1-866-555-0123" className="btn-cta-large">
-              <svg className="cta-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              Call Now: (866) 555-0123
-            </a>
-            <button className="btn-cta-secondary">Free Consultation</button>
+          <div className="cta-content">
+            <div className="cta-badge">Award-Winning Legal Representation</div>
+            <h2 className="cta-heading">Take Action Today - Your Recovery Starts Here</h2>
+            <p className="cta-description">Connect with our experienced team for a confidential case evaluation. We're here to help you understand your rights and explore your options.</p>
+            
+            <div className="cta-features">
+              <div className="cta-feature-item">
+                <svg className="cta-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Expert Legal Team</span>
+              </div>
+              <div className="cta-feature-item">
+                <svg className="cta-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Maximum Compensation</span>
+              </div>
+              <div className="cta-feature-item">
+                <svg className="cta-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Proven Track Record</span>
+              </div>
+            </div>
+
+            <div className="cta-buttons">
+              <a href="tel:1-866-555-0123" className="btn-cta-large">
+                <svg className="cta-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <div className="btn-cta-phone-content">
+                  <span className="btn-cta-label">Speak With An Attorney</span>
+                  <span className="btn-cta-number">(866) 555-0123</span>
+                </div>
+              </a>
+              <button className="btn-cta-secondary">Get Started Online</button>
+            </div>
           </div>
         </div>
       </section>
